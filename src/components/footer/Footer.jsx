@@ -30,41 +30,41 @@ const Footer = () => {
             <div className="col1">
               <h2>Quick Links</h2>
               <div className="f3">
-                <Link href="/raaj-solar/about-us">Home</Link>
+                <Link href="/">Home</Link>
               </div>
               <div className="f3">
-                <Link href="/raaj-solar/management">About Us</Link>
+                <Link href="/">About Us</Link>
               </div>
               <div className="f3">
-                <Link href="/raaj-solar/blog">Products</Link>
+                <Link href="/">Products</Link>
               </div>
               <div className="f3">
-                <Link href="/raaj-solar/blog">Segments</Link>
+                <Link href="/">Segments</Link>
               </div>
               <div className="f3">
-                <Link href="/raaj-solar/blog">Technical Specification</Link>
+                <Link href="/">Technical Specification</Link>
               </div>
               <div className="f3">
-                <Link href="/raaj-solar/blog">Quality Assurance</Link>
+                <Link href="/">Quality Assurance</Link>
               </div>
               <div className="f3">
-                <Link href="/raaj-solar/blog">Blogs</Link>
+                <Link href="/">Blogs</Link>
               </div>
               <div className="f3">
-                <Link href="/raaj-solar/blog">Contact Us</Link>
+                <Link href="/">Contact Us</Link>
               </div>
             </div>
             <div className="col2">
               <h2>Registered Office</h2>
 
               <div className="f3">
-                <Link href="/raaj-solar/products">Products</Link>
+                <Link href="/">Products</Link>
               </div>
               <div className="f3">
-                <Link href="/raaj-solar/career">Career</Link>
+                <Link href="/">Career</Link>
               </div>
               <div className="f3">
-                <Link href="/raaj-solar/contact-us">Contact Us</Link>
+                <Link href="/">Contact Us</Link>
               </div>
             </div>
             <div className="col2">
