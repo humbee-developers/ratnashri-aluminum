@@ -14,47 +14,90 @@ body {
   transition-duration: 800ms;
   overflow-x: hidden;
 }
+
+
+@font-face {
+  font-family: "LatoBlack";
+  src: local("LatoBlack"),
+    url("../../src/fonts/Lato-Black.ttf") format("truetype");
+  font-weight: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "BlackItalic";
+  src: local("BlackItalic"),
+    url("../../src/fonts/Lato-BlackItalic.ttf") format("truetype");
+    font-display: swap;
+}
+@font-face {
+  font-family: "LatoBold";
+  src: local("LatoBold"),
+    url("../../src/fonts/Lato-Bold.ttf") format("truetype");
+    font-display: swap;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "LatoItalic";
+  src: local("LatoItalic"),
+    url("../../src/fonts/Lato-Italic.ttf") format("truetype");
+    font-display: swap;
+}
+@font-face {
+  font-family: "LatoLight";
+  src: local("LatoLight"),
+    url("../../src/fonts/Lato-Light.ttf") format("truetype");
+    font-display: swap;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "LatoRegular";
+  src: local("LatoRegular"),
+    url("../../src/fonts/Lato-Regular.ttf") format("truetype");
+    font-display: swap;
+}
+
+
 h1 {
-  font-family: "made_mirage_regular";
+  font-family: "LatoRegular";
 }
 h2 {
-  font-family: "made_mirage_regular";
+  font-family: "LatoRegular";
 }
 h3 {
-  font-family: "made_mirage_regular";
+  font-family: "LatoRegular";
 }
 h4 {
-  font-family: "made_mirage_regular";
+  font-family: "LatoRegular";
 }
 h5 {
-  font-family: "made_mirage_regular";
+  font-family: "LatoRegular";
 }
 h6 {
-  font-family: "made_mirage_regular";
+  font-family: "LatoRegular";
 }
 a {
   text-decoration: none;
-  font-family: "made_mirage_regular";
+  font-family: "LatoRegular";
 }
 div {
-  font-family: "made_mirage_regular";
+  font-family: "LatoRegular";
 }
 button {
-  font-family: "made_mirage_regular";
+  font-family: "LatoRegular";
 }
 ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  font-family: "made_mirage_regular";
+  font-family: "LatoRegular";
   li {
-    font-family: "made_mirage_regular";
+    font-family: "LatoRegular";
   }
 } 
 
 input {
-  font-family: "made_mirage_regular";
+  font-family: "LatoRegular";
 }
 textarea {
-  font-family: "made_mirage_regular";
+  font-family: "LatoRegular";
 }

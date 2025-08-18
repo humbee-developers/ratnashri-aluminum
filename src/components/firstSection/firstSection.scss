@@ -1,0 +1,19 @@
+.FirstSectionWarpper {
+  color: #004878;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  height: 100vh;
+  .InnerSectionWrapper {
+    padding: 0 60px;
+    .InnerWapper {
+      font-size: 60px;
+      width: 70%;
+      @media(max-width: 768px){
+        font-size: 40px;
+        width: 100%;
+      }
+      
+    }
+  }
+}
