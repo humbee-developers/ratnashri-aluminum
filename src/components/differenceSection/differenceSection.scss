@@ -1,26 +1,41 @@
-.PrecisionSec {
-    padding: 100px 50px 0 50px;
+.DifferenceSec {
+    padding: 0 50px;
 
     @media(max-width: 575px) {
-        padding: 50px 30px;
+        padding: 0 30px;
     }
 
-    .PrecisionSecHeading {
-        .PrecisionHeadingSec {
+    .DifferenceSecHeading {
+        .HeadingSec {
             p {
                 font-size: 50px;
                 font-weight: 700;
                 color: rgb(2, 64, 97);
+                @media(max-width: 475px){
+                    font-size: 30px;
+                }
+            }
+        }
+
+        .ContentSec {
+            padding: 20px 0;
+
+            p {
+                font-size: 25px;
+                color: #565656;
+                @media(max-width: 575px){
+                    font-size: 20px;
+                }
             }
         }
     }
 
-    .PrecisionImageSectionInner {
+    .ImageSectionInner {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
 
-        .PrecisionImageSectionImg {
+        .ImageSectionImg {
             img {
                 max-width: 100%;
                 height: auto;
@@ -28,7 +43,7 @@
         }
     }
 
-    .PrecisionContentInnerDiff {
+    .ContentInnerDiff {
         padding-top: 2rem;
         p {
             letter-spacing: 0.3px;

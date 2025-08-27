@@ -3,11 +3,14 @@
   padding: 100px 0px;
   display: flex;
   width: 100%;
+  overflow: hidden !important;
   justify-content: space-evenly;
   color: #000;
   @media screen and (max-width:575px) {
-    padding: 50px 20px;
+    padding: 50px 10px;
     flex-direction: column;
+    display: block;
+    overflow: hidden !important;
   }
   .yello_btn{
     border: 1px solid #000;
@@ -16,6 +19,9 @@
   .ImgSec{
     max-width: 100%;
     height: auto;
+    // @media(max-width: 575px){
+    //   max-width: 85%;
+    // }
   }
  
 }
@@ -67,6 +73,7 @@ input:-webkit-autofill:active {
   height: 85px;
   @media screen and (max-width:575px) {
     height: 65px;
+    width: 93%;
   }
 }
 
