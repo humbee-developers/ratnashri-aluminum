@@ -1,0 +1,53 @@
+.DifferenceSec {
+    padding: 0 50px;
+
+    @media(max-width: 575px) {
+        padding: 0 30px;
+    }
+
+    .DifferenceSecHeading {
+        .HeadingSec {
+            p {
+                font-size: 50px;
+                font-weight: 700;
+                color: rgb(2, 64, 97);
+            }
+        }
+
+        .ContentSec {
+            padding: 20px 0;
+
+            p {
+                font-size: 25px;
+                color: #565656;
+                @media(max-width: 575px){
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    .ImageSectionInner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .ImageSectionImg {
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    .ContentInnerDiff {
+        padding-top: 2rem;
+        p {
+            letter-spacing: 0.3px;
+            font-size: 17px;
+            font-style: normal;
+            font-weight: 200;
+            line-height: 30px;
+        }
+    }
+}

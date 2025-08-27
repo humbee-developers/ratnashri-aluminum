@@ -28,17 +28,21 @@
           padding: 30px 20px;
         }
         .heading {
+          width: 70%;
           font-size: 50px;
           margin-bottom: 20px;
-          font-size: 42px;
-          font-weight: 400;
+          font-size: 45px;
+          font-weight: 700;
           line-height: 64px;
           letter-spacing: 0.015em;
           text-align: left;
-          text-transform: uppercase;
+          // text-transform: uppercase;
+          @media(max-width: 768px){
+            width: 100%;
+          }
         }
         .content {
-          color: rgba(53, 53, 53, 1);
+          color: #000;
           font-size: 16px;
           font-style: normal;
           font-weight: 400;
@@ -46,7 +50,7 @@
           letter-spacing: 0.21px;
           text-transform: capitalize;
           @media (max-width: 767px) {
-            font-size: 14px;
+            font-size: 15px;
           }
         }
       }

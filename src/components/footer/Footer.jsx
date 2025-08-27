@@ -54,7 +54,9 @@ const Footer = () => {
                 <Link href="/">Contact Us</Link>
               </div>
             </div>
-            <div className="col2">
+            {/* 2 sections */}
+            <div className="ColSection">
+              <div className="col2">
               <h2>Registered Office</h2>
 
               <div className="f3">
@@ -68,7 +70,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="col2">
-              <h2>Connect</h2>
+              <h2 id="col2sp">Connect</h2>
               {/* <div className="link">
                 <Link to={"tel:9925031915"}>+91 99250 31915</Link>
               </div> */}
@@ -84,6 +86,8 @@ const Footer = () => {
                 </Link>
               </div>
             </div>
+            </div>
+             {/* 2 sections */}
             {/* <div className="col3">
               <h2>Contact</h2>
               <div className="address">

@@ -1,0 +1,41 @@
+.PrecisionSec {
+    padding: 100px 50px 0 50px;
+
+    @media(max-width: 575px) {
+        padding: 50px 30px;
+    }
+
+    .PrecisionSecHeading {
+        .PrecisionHeadingSec {
+            p {
+                font-size: 50px;
+                font-weight: 700;
+                color: rgb(2, 64, 97);
+            }
+        }
+    }
+
+    .PrecisionImageSectionInner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .PrecisionImageSectionImg {
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    .PrecisionContentInnerDiff {
+        padding-top: 2rem;
+        p {
+            letter-spacing: 0.3px;
+            font-size: 17px;
+            font-style: normal;
+            font-weight: 200;
+            line-height: 30px;
+        }
+    }
+}
