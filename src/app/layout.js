@@ -4,7 +4,7 @@ import "./globals.scss";
 
 export const metadata = {
   title: "Ratnashri Aluminium",
-  description: "Ratnashri Aluminium",
+  description: "Aluminium Extrusion, Profiles &amp; Section Manufacturers in India",
 };
 
 export default function RootLayout({ children }) {  

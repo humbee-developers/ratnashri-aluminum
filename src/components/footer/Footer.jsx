@@ -57,37 +57,41 @@ const Footer = () => {
             {/* 2 sections */}
             <div className="ColSection">
               <div className="col2">
-              <h2>Registered Office</h2>
-
-              <div className="f3">
+                <h2 id="col2sp">Registered Office</h2>
+                <div className="addressFirst">
+                  Survey No. 1221 (Old Survey No. 672/1-2), B/h Madhu Textiles,
+                  Near Nandasan Crossroads, Village: Rajpur, Taluka: Kadi,
+                  District: Mehsana 382715.
+                </div>
+                {/* <div className="f3">
                 <Link href="/">Products</Link>
-              </div>
-              <div className="f3">
+              </div> */}
+                {/* <div className="f3">
                 <Link href="/">Career</Link>
               </div>
               <div className="f3">
                 <Link href="/">Contact Us</Link>
+              </div> */}
               </div>
-            </div>
-            <div className="col2">
-              <h2 id="col2sp">Connect</h2>
-              {/* <div className="link">
+              <div className="col2">
+                <h2 id="col2spOne">Connect</h2>
+                {/* <div className="link">
                 <Link to={"tel:9925031915"}>+91 99250 31915</Link>
               </div> */}
-              <div className="f3">
-                <Link href={"tel:+917927561333"}>+91 7927561333</Link>
-              </div>
-              <div className="f3">
-                <Link href={"tel:+919825627611"}>+91 7927561333</Link>
-              </div>
-              <div className="f3">
-                <Link href={"mailto:sales@ratnashri.co.in"}>
-                  sales@ratnashri.co.in
-                </Link>
+                <div className="f3">
+                  <Link href={"tel:+917927561333"}>+91 7927561333</Link>
+                </div>
+                <div className="f3">
+                  <Link href={"tel:+919825627611"}>+91 9825627611</Link>
+                </div>
+                <div className="f3">
+                  <Link href={"mailto:sales@ratnashri.co.in"}>
+                    sales@ratnashri.co.in
+                  </Link>
+                </div>
               </div>
             </div>
-            </div>
-             {/* 2 sections */}
+            {/* 2 sections */}
             {/* <div className="col3">
               <h2>Contact</h2>
               <div className="address">
@@ -102,7 +106,7 @@ const Footer = () => {
               </div>
             </div> */}
             <div className="col3">
-              <h2>Works</h2>
+              <h2 id="col2sp">Works</h2>
 
               <div className="address">
                 Survey No. 1221 (Old Survey No. 672/1-2), B/h Madhu Textiles,

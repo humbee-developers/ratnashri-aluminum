@@ -1,34 +1,42 @@
 import "./brochureForm.scss";
 import styled from 'styled-components';
+import YellowSubmitButtonForm from "../../components/yellowSubmitButtonForm/YellowSubmitButtonForm";
+
 function BrochureForm() {
-    return (
-        <div className="BrochureMain">
-            <div className="BrochureInner">
-                <div className="BrochureInnerContent">
-                    <p>Download Brochure</p>
-                </div>
-                <div className="BrochureInput">
-                    <StyledWrapper>
-                        <div className="coolinput">
-                            <label className="text" htmlFor="input">Name*</label>
-                            <input className="input" name="input"  type="text" />
-                        </div>
-                    </StyledWrapper>
-                    <StyledWrapper>
-                        <div className="coolinput">
-                            <label className="text" htmlFor="input">Email*</label>
-                            <input className="input" name="input" type="email" />
-                        </div>
-                    </StyledWrapper>
-                    <div>
+  return (
+    <div className="BrochureMain">
+      <div className="BrochureInner">
+        <div className="BrochureInnerContent">
+          <p>Download Brochure</p>
+        </div>
+        <div className="BrochureInput">
+          <StyledWrapper>
+            <div className="coolinput">
+              <label className="text" htmlFor="input">Name*</label>
+              <input className="input" name="input" type="text" />
+            </div>
+          </StyledWrapper>
+          <StyledWrapper>
+            <div className="coolinput">
+              <label className="text" htmlFor="input">Email*</label>
+              <input className="input" name="input" type="email" />
+            </div>
+          </StyledWrapper>
+          {/* <div className="submit-button">
+            <YellowSubmitButtonForm
+              btn_text={"Download"}
+              type="submit"
+            />
+          </div> */}
+          <div>
                         <button className="button">
                             <span className="button-content">Download </span>
                         </button>
                     </div>
-                </div>
-            </div>
         </div>
-    );
+      </div>
+    </div>
+  );
 }
 const StyledWrapper = styled.div`
   .coolinput {
@@ -51,8 +59,8 @@ const StyledWrapper = styled.div`
   }
 
   .coolinput input[type="text"].input {
-    padding: 11px 20px;
-    font-size: 0.75rem;
+    padding: 11px 25px 11px 10px;
+    font-size: 15px;
     border: 1px #619DEA38 solid;
     border-radius: 5px;
     background: #619DEA17;
@@ -62,8 +70,8 @@ const StyledWrapper = styled.div`
     outline: none;
   }
    .coolinput input[type="email"].input {
-   padding: 11px 20px;
-    font-size: 0.75rem;
+   padding: 11px 25px 11px 10px;
+    font-size: 15px;
     border: 1px #619DEA38 solid;
     border-radius: 5px;
     background: #619DEA17;
