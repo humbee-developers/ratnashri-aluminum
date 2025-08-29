@@ -125,7 +125,9 @@ const Footer = () => {
           </div>
           <div className="copyright">
             <div className="copyright_text">
-              <Image src={Logo1} alt="none" />
+              <Link href={"/"}>
+                <Image src={Logo1} alt="none" />
+              </Link>
               <div className="copyright_textMain">
                 <p className="copyright_textOne">
                   Ratnashri Aluminium Pvt. Ltd. is a joint venture of Raajratna

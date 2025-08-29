@@ -1,5 +1,6 @@
 import "./brochureForm.scss";
 import styled from 'styled-components';
+import { motion } from "framer-motion";
 import YellowSubmitButtonForm from "../../components/yellowSubmitButtonForm/YellowSubmitButtonForm";
 
 function BrochureForm() {
@@ -7,7 +8,19 @@ function BrochureForm() {
     <div className="BrochureMain">
       <div className="BrochureInner">
         <div className="BrochureInnerContent">
-          <p>Download Brochure</p>
+          <motion.p initial={{
+            opacity: 0,
+            y: 80,
+          }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                duration: 1.5,
+              },
+            }}
+            viewport={{ once: true }}
+          >Download Brochure</motion.p>
         </div>
         <div className="BrochureInput">
           <StyledWrapper>
@@ -29,10 +42,10 @@ function BrochureForm() {
             />
           </div> */}
           <div>
-                        <button className="button">
-                            <span className="button-content">Download </span>
-                        </button>
-                    </div>
+            <button className="button">
+              <span className="button-content">Download </span>
+            </button>
+          </div>
         </div>
       </div>
     </div>

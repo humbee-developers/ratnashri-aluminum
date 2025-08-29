@@ -1,5 +1,7 @@
+
 import Footer from "@/components/footer/Footer";
 import "./globals.scss";
+import Navbar from "@/components/navbar/index";
 
 
 export const metadata = {
@@ -13,6 +15,7 @@ export default function RootLayout({ children }) {
       <body 
       // className={`${geistSans.variable} ${geistMono.variable}`}
       >
+        <Navbar />
         {children}
         <Footer />
       </body>

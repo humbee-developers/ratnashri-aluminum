@@ -1,5 +1,6 @@
 import "./aboutExperience.scss";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import image1 from "../../images/expbanner.png";
 
 function AboutExperience() {
@@ -8,7 +9,20 @@ function AboutExperience() {
       <div className="aboutExperience_wrapper">
         <div className="aboutExperience_wrapper_inner">
           <div className="aboutExperience_wrapper_inner_wrapper">
-            <div className="heading">One Aluminium. Endless Possibilities</div>
+            <motion.div
+              initial={{
+                opacity: 0,
+                y: 80,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: {
+                  duration: 1.5,
+                },
+              }}
+              viewport={{ once: true }}
+              className="heading">One Aluminium. Endless Possibilities</motion.div>
             <div className="content">
               {
                 "Aluminium’s versatility powers solutions across industries and challenges. From enabling sustainable architecture and renewable energy to elevating advanced engineering and innovative furniture design, our extrusions adapt to every vision. With Ratnashri Aluminium, a single material unlocks limitless innovation—built to empower your boldest business ambitions."
@@ -17,7 +31,7 @@ function AboutExperience() {
 
 
 
-            
+
           </div>
         </div>
         <div className="img">

@@ -6,7 +6,7 @@ import "./form.scss";
 import { Slide, ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import YellowSubmitButtonForm from "../../components/yellowSubmitButtonForm/YellowSubmitButtonForm";
-// import {motion} from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import image1 from "@/images/tcs.jpg"
 const Form1 = () => {
@@ -86,31 +86,44 @@ const Form1 = () => {
   return (
     <div className="form">
       <div>
-        <Image src={image1} alt="none" className="ImgSec"/>
+        <Image src={image1} alt="none" className="ImgSec" />
       </div>
       {/* <div>
-        <motion.div 
-        initial={{
-          opacity: 0,
-          y: 80,
-        }}
-        whileInView={{
-          opacity: 1,
-          y: 0,
-          transition: {
-            duration: 1.5,
-          },
-        }}
-        viewport={{ once: true}}
+        <motion.div
+          initial={{
+            opacity: 0,
+            y: 80,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: {
+              duration: 1.5,
+            },
+          }}
+          viewport={{ once: true }}
         >
-          
-        <p className="form_header">The Authenticity of luxury in each layer</p>
+
+          <p className="form_header">The Authenticity of luxury in each layer</p>
         </motion.div>
       </div> */}
 
       <div>
         <div>
-          <p className="form_header">GET A QUOTE</p>
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 80,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                duration: 1.5,
+              },
+            }}
+            viewport={{ once: true }}
+            className="form_header">GET A QUOTE</motion.div>
         </div>
         <form onSubmit={handleSubmit}>
           <div className="form_field_flex">

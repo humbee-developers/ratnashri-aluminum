@@ -1,5 +1,6 @@
 import "./precisionSection.scss";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import image1 from "../../images/sec1.png";
 import image2 from "../../images/sec2.png";
 import image3 from "../../images/sec3.png";
@@ -10,8 +11,32 @@ function PrecisionSection() {
         <div className="PrecisionSec">
             <div className="PrecisionSecHeading">
                 <div className="PrecisionHeadingSec">
-                    <p>Precision Dies.</p>
-                    <p>Seamless Extrusions.</p>
+                    <motion.p
+                        initial={{
+                            opacity: 0,
+                            y: 80,
+                        }}
+                        whileInView={{
+                            opacity: 1,
+                            y: 0,
+                            transition: {
+                                duration: 1.5,
+                            },
+                        }}
+                        viewport={{ once: true }}>Precision Dies.</motion.p>
+                    <motion.p
+                        initial={{
+                            opacity: 0,
+                            y: 80,
+                        }}
+                        whileInView={{
+                            opacity: 1,
+                            y: 0,
+                            transition: {
+                                duration: 1.5,
+                            },
+                        }}
+                        viewport={{ once: true }}>Seamless Extrusions.</motion.p>
                 </div>
             </div>
             {/*  */}

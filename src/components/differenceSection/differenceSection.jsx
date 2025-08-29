@@ -1,5 +1,6 @@
 import "./differenceSection.scss";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import image1 from "../../images/sec1.png";
 import image2 from "../../images/sec2.png";
 import image3 from "../../images/sec3.png";
@@ -10,7 +11,20 @@ function DifferenceSection() {
         <div className="DifferenceSec">
             <div className="DifferenceSecHeading">
                 <div className="HeadingSec">
-                    <p>Our Difference</p>
+                    <motion.p
+                        initial={{
+                            opacity: 0,
+                            y: 80,
+                        }}
+                        whileInView={{
+                            opacity: 1,
+                            y: 0,
+                            transition: {
+                                duration: 1.5,
+                            },
+                        }}
+                        viewport={{ once: true }}
+                    >Our Difference</motion.p>
                 </div>
                 <div className="ContentSec">
                     <p>Trusted by Visionaries. Proven by Performance.</p>
