@@ -12,6 +12,10 @@
   margin-top: 3rem;
   margin-left: 3rem;
 }
+.ImgInner{
+  max-width: 100%;
+  height: auto;
+}
 .button {
   width: 48px;
   height: 48px;
@@ -103,5 +107,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+}
+@media(max-width: 575px){
+  .ImgBanner{
+  margin-top: 2rem;
+  margin-left: 2rem;
+}
+.ImgInner{
+  max-width: 50%;
+  height: auto;
+}
+.header {
+    right: 0rem;
   }
 }

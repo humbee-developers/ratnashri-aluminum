@@ -1,15 +1,16 @@
+"use client"
 import React from "react";
 import Image from "next/image";
 import img1 from "@/images/sec1.png";
 import img2 from "@/images/sec2.png";
 import img3 from "@/images/sec3.png";
 import img4 from "@/images/sec4.png";
-import img5 from "@/images/sec1.png";
-import img6 from "@/images/sec2.png";
-import img7 from "@/images/sec3.png";
-import img8 from "@/images/sec4.png";
-import img9 from "@/images/sec1.png";
-import img10 from "@/images/sec2.png";
+// import img5 from "@/images/sec1.png";
+// import img6 from "@/images/sec2.png";
+// import img7 from "@/images/sec3.png";
+// import img8 from "@/images/sec4.png";
+// import img9 from "@/images/sec1.png";
+// import img10 from "@/images/sec2.png";
 
 import { useRef, useEffect } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -90,28 +91,28 @@ const Page = () => {
     });
   };
 
-//   const createBoll = () => {
-//     gsap.to(".triggered-bead", {
-//       scrollTrigger: {
-//         trigger: container.current,
-//         scrub: 1,
-//         start: "top 100%",
-//         end: "bottom 20%",
-//       },
-//       opacity: 1,
-//       backgroundColor: "#C3A464",
-//       duration: 1.5,
-//       ease: "slow(0.7,0.7,false)",
-//       scale: 2.2,
-//       stagger: 0.9,
-//     });
-//   };
+  const createBoll = () => {
+    gsap.to(".triggered-bead", {
+      scrollTrigger: {
+        trigger: container.current,
+        scrub: 1,
+        start: "top 100%",
+        end: "bottom 20%",
+      },
+      opacity: 1,
+      backgroundColor: "#0584C7",
+      duration: 1.5,
+      ease: "slow(0.7,0.7,false)",
+      scale: 2.2,
+      stagger: 0.9,
+    });
+  };
 
   return (
     <div>
       <div className={styles.timeline_outer}>
         <div className={styles.timeline_wrapper}>
-          <h2 className={styles.timeline_heading}>Our Story</h2>
+          <h2 className={styles.timeline_heading}>Our Expertise</h2>
           <div className={styles.timeline_main_outer}>
             <div className={styles.timeline_width}>
               <div className={styles.timeline} ref={container}>
@@ -124,9 +125,9 @@ const Page = () => {
                   <p className={`${styles.timeline_comment} triggered-text`}>
                    From robust standard sections to complex custom profiles, our advanced facility near Ahmedabad delivers reliability across every extrusion. We partner with top architects, OEMs, infrastructure developers, and manufacturers with tailored solutions for
                   </p>
-                  <div className={styles.bead_outer}>
+                  {/* <div className={styles.bead_outer}>
                     <div className={`${styles.bead} triggered-bead`}></div>
-                  </div>
+                  </div> */}
                   <div className={`${styles.content} triggered-element`}>
                     <Image
                       src={img1}
@@ -143,9 +144,9 @@ const Page = () => {
                   <p className={`${styles.timeline_comment} triggered-text`}>
                     From robust standard sections to complex custom profiles, our advanced facility near Ahmedabad delivers reliability across every extrusion. We partner with top architects, OEMs, infrastructure developers, and manufacturers with tailored solutions for
                   </p>
-                  <div className={styles.bead_outer}>
+                  {/* <div className={styles.bead_outer}>
                     <div className={`${styles.bead} triggered-bead`}></div>
-                  </div>
+                  </div> */}
                   <div className={`${styles.content} triggered-element`}>
                     <Image
                       src={img2}
@@ -162,9 +163,9 @@ const Page = () => {
                   <p className={`${styles.timeline_comment} triggered-text`}>
                    From robust standard sections to complex custom profiles, our advanced facility near Ahmedabad delivers reliability across every extrusion. We partner with top architects, OEMs, infrastructure developers, and manufacturers with tailored solutions for
                   </p>
-                  <div className={styles.bead_outer}>
+                  {/* <div className={styles.bead_outer}>
                     <div className={`${styles.bead} triggered-bead`}></div>
-                  </div>
+                  </div> */}
                   <div className={`${styles.content} triggered-element`}>
                     <Image
                       src={img3}
@@ -181,9 +182,9 @@ const Page = () => {
                   <p className={`${styles.timeline_comment} triggered-text`}>
                    From robust standard sections to complex custom profiles, our advanced facility near Ahmedabad delivers reliability across every extrusion. We partner with top architects, OEMs, infrastructure developers, and manufacturers with tailored solutions for
                   </p>
-                  <div className={styles.bead_outer}>
+                  {/* <div className={styles.bead_outer}>
                     <div className={`${styles.bead} triggered-bead`}></div>
-                  </div>
+                  </div> */}
                   <div className={`${styles.content} triggered-element`}>
                     <Image
                       src={img4}

@@ -22,7 +22,7 @@ export default function Home() {
 
         <div className={styles.ImgBanner}>
           <Link href="/">
-            <Image src={Image1} alt="Logo" />
+            <Image src={Image1} alt="Logo" className={styles.ImgInner} />
           </Link>
         </div>
         <div className={styles.header}>

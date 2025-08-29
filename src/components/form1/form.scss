@@ -3,14 +3,14 @@
   padding: 100px 0px;
   display: flex;
   width: 100%;
-  overflow: hidden !important;
+  overflow-x: hidden !important;
   justify-content: space-evenly;
   color: #000;
   @media screen and (max-width:575px) {
     padding: 50px 10px;
     flex-direction: column;
     display: block;
-    overflow: hidden !important;
+    overflow-x: hidden !important;
   }
   .yello_btn{
     border: 1px solid #000;
