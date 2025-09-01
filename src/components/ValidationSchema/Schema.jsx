@@ -2,7 +2,7 @@ import * as Yup from "yup";
 
 export const FormSchemas = Yup.object({
     fullName: Yup.string().required("Full Name is required"),
-    companyName: Yup.string().required("Last Name is required"),
+    companyName: Yup.string().required("Company Name is required"),
     email: Yup.string().email("Invalid email address").required("Email is required"),
     PhoneNo: Yup.string()
       .matches(/^[0-9]{10}$/, "Phone number must be 10 digits")
@@ -11,7 +11,7 @@ export const FormSchemas = Yup.object({
 });
 export const form2Schemas = Yup.object({
     fName: Yup.string().required("First Name is required"),
-    lName: Yup.string().required("Last Name is required"),
+    lName: Yup.string().required("Company Name is required"),
     email: Yup.string().email("Invalid email address").required("Email is required"),
     phone: Yup.string()
       .matches(/^[0-9]{10}$/, "Phone number must be 10 digits")
@@ -23,7 +23,7 @@ export const form3Schemas = Yup.object({
 })
 export const form4Schemas = Yup.object({
   ContactFName: Yup.string().required("First Name is required"),
-  ContactLName: Yup.string().required("Last Name is required"),
+  ContactLName: Yup.string().required("Company Name is required"),
   contactEmail: Yup.string().email("Invalid email address").required("Email is required"),
   ContactPhone: Yup.string()
     .matches(/^[0-9]{10}$/, "Phone number must be 10 digits")
@@ -32,7 +32,7 @@ export const form4Schemas = Yup.object({
 });
 export const careerFormSchemas = Yup.object({
   firstName: Yup.string().required("First Name is required"),
-  lastName: Yup.string().required("Last Name is required"),
+  lastName: Yup.string().required("Company Name is required"),
   emailAddress: Yup.string().email("Invalid email address").required("Email is required"),
   phoneNumber: Yup.string()
     .matches(/^[0-9]{10}$/, "Phone number must be 10 digits")
