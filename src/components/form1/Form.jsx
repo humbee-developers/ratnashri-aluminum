@@ -245,7 +245,6 @@ const Form1 = () => {
               transition={Slide}
               className={"contactFormNotification"}
             />
-            
           </div>
         </form>
       </div>
