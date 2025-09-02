@@ -8,6 +8,7 @@ import DifferenceSection from "@/components/differenceSection/differenceSection"
 import PrecisionSection from "@/components/precisionSection/precisionSection";
 import BrochureForm from "@/components/brochure/brochureForm";
 import Form1 from "@/components/form1/Form";
+import VideoPlayer from "@/components/videoPlayer/videoplayer";
 
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
     <>
       <main className="main">
         <FirstSection />
+        <VideoPlayer />
         <AboutExperience />
         <DifferenceSection />
         {/* <Timeline /> */}
