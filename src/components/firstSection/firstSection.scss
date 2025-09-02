@@ -5,8 +5,15 @@
   align-items: center;
   height: 90vh;
   overflow-x: hidden;
+  @media(max-width: 475px){
+    height: 45vh;
+  }
   .InnerSectionWrapper {
     padding: 0 60px;
+    @media(max-width: 575px){
+      padding: 0 30px;
+    }
+    
     .InnerWapper {
       font-size: 60px;
       width: 70%;
@@ -14,6 +21,9 @@
         font-size: 40px;
         width: 100%;
       }
+      @media(max-width: 475px){
+      font-size: 25px;
+    }
       
     }
   }

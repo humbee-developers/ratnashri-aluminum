@@ -108,7 +108,7 @@ const Form1 = () => {
         </motion.div>
       </div> */}
 
-      <div>
+      <div className="FormInnerTextHeader">
         <div>
           <motion.div
             initial={{

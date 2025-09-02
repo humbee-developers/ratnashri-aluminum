@@ -95,6 +95,9 @@
     top: 2rem;
     right: -1.2rem;
   }
+  .ImgBanner{
+    margin-top: 2rem;
+  }
 
 
 
@@ -115,10 +118,18 @@
   margin-left: 2rem;
 }
 .ImgInner{
-  max-width: 50%;
+  max-width: 55%;
   height: auto;
 }
-.header {
-    right: 0rem;
+.header{
+  right: 0;
+  margin: 5px 25px 0 0;
+}
+
+}
+@media(max-width: 375px){
+  .header {
+    margin: 0 25px 0 0;
+    padding: 0 15px;
   }
 }

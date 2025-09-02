@@ -7,7 +7,7 @@
   justify-content: space-evenly;
   color: #000;
   @media screen and (max-width:575px) {
-    padding: 50px 10px;
+    padding: 50px 0px;
     flex-direction: column;
     display: block;
     overflow-x: hidden !important;
@@ -24,6 +24,11 @@
     // }
   }
  
+}
+.FormInnerTextHeader{
+  @media(max-width: 575px){
+    padding: 0 20px;
+  }
 }
 
 .form_header {
