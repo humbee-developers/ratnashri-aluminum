@@ -8,6 +8,13 @@
 
     .DifferenceSecHeading {
         .HeadingSec {
+            padding-top: 150px;
+            @media(max-width: 991px){
+                padding-top: 100px;
+            }
+            @media(max-width: 575px){
+                padding-top: 50px;
+            }
             p {
                 font-size: 50px;
                 font-weight: 700;
