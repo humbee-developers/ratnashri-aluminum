@@ -19,8 +19,8 @@ export default function Home() {
         <VideoPlayer />
         <AboutExperience />
         <DifferenceSection />
-        <Timeline />
-        <Timeline1 />
+        {/* <Timeline />
+        <Timeline1 /> */}
         <PrecisionSection />
         <BrochureForm />
         <Form1 />
