@@ -147,7 +147,7 @@
   }
 
   .section {
-    padding: 2.6rem 0rem 22rem !important;
+    padding: 2.6rem 0rem 15rem !important;
     border-radius: 1rem;
   }
 
@@ -200,7 +200,7 @@
   }
 
   .section {
-    padding: 2.6rem 0rem 22rem !important;
+    padding: 2.6rem 0rem 15rem !important;
     border-radius: 1rem;
   }
 
@@ -245,7 +245,7 @@
   }
 
   .section {
-    padding: 2.6rem 0rem 22rem;
+    padding: 2.6rem 0rem 15rem;
     border-radius: 1rem;
   }
 
@@ -309,7 +309,7 @@
   }
 
   .section {
-    padding: 2.6rem 0rem 14rem;
+    padding: 2.6rem 0rem 5rem;
     border-radius: 1rem;
   }
 
@@ -510,7 +510,7 @@
     position: relative;
     z-index: 1;
     margin: 0 auto;
-    padding: 2.6rem 0rem 14rem;
+    padding: 2.6rem 0rem 4rem;
     border-radius: 1rem;
     align-items: center;
     min-height: 218px;
@@ -540,7 +540,7 @@
     position: relative;
     z-index: 1;
     margin: 0 auto;
-    padding: 2.6rem 0rem 20rem;
+    padding: 2.6rem 0rem 4rem;
     border-radius: 1rem;
     align-items: center;
     min-height: 218px;
@@ -635,7 +635,7 @@
     position: relative;
     z-index: 1;
     margin: 0 auto;
-    padding: 2.6rem 0rem 12rem;
+    padding: 2.6rem 0rem 4rem;
     border-radius: 1rem;
     align-items: center;
     min-height: 218px;
@@ -679,7 +679,7 @@
     position: relative;
     z-index: 1;
     margin: 0 auto;
-    padding: 2.6rem 0rem 13rem;
+    padding: 2.6rem 0rem 4rem;
     border-radius: 1rem;
     align-items: center;
     min-height: 218px;
@@ -993,7 +993,7 @@
   .section {
     padding: 1rem 2rem 2rem;
     border-radius: 1rem;
-    min-height: 218px;
+    min-height: 218px ;
   }
 
   .line {

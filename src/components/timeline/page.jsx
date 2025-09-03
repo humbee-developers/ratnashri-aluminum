@@ -2,6 +2,7 @@
 import { useRef, useEffect, useState } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
+import { motion } from "framer-motion";
 import styles from "@/components/timeline/time.module.css";
 
 const Home = ({ loadUSP }) => {
@@ -162,7 +163,23 @@ const Home = ({ loadUSP }) => {
     <div className={styles.display1}>
       <div className={styles.first_timeline_outer}>
         <div className={styles.first_timeline_inner}>
-          <div className={styles.timeline_animation_text}>Our Expertise</div>
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 80,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                duration: 1.5,
+              },
+            }}
+            viewport={{ once: true }}
+            className={styles.timeline_animation_text}
+          >
+            Our Expertise
+          </motion.div>
           <div className={styles.timeline_animation_text_One}>
             <p>Crafting Aluminium. Elevating Enterprises.</p>
           </div>
