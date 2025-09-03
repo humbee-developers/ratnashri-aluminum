@@ -4,7 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
 import styles from "@/components/timeline/time.module.css";
 
-const Home = ({loadUSP}) => {
+const Home = ({ loadUSP }) => {
   const sectionRef = useRef(null);
   const canvasRef = useRef(null);
   const textRef = useRef(null);
@@ -19,14 +19,11 @@ const Home = ({loadUSP}) => {
     const context = canvas.getContext("2d");
     contextRef.current = context;
 
-
-
-
     const setCanvasSize = () => {
       const canvas = canvasRef.current;
       const originalWidth = 1632;
       const originalHeight = 918;
-      const aspectRatio = originalWidth / originalHeight; 
+      const aspectRatio = originalWidth / originalHeight;
 
       const availableWidth = window.innerWidth;
       const availableHeight = window.innerHeight;
@@ -50,10 +47,12 @@ const Home = ({loadUSP}) => {
     const frameCount = 483;
 
     const currentFrame = (index) =>
-      `https://plywoodassets.royaletouche.com/assets/newframes/usp/F${(index + 1)
+      `https://plywoodassets.royaletouche.com/assets/newframes/usp/F${(
+        index + 1
+      )
         .toString()
         .padStart(4, "0")}.webp`;
-        // let imgL = [];
+    // let imgL = [];
     for (let i = 0; i < frameCount; i++) {
       let img = new Image();
       img.src = currentFrame(i);
@@ -62,7 +61,7 @@ const Home = ({loadUSP}) => {
     }
     // const loadImages = async () => {
     //   try {
-      
+
     //     const loadImagePromises = imgL.map((imageUrl) => {
     //       return new Promise((resolve) => {
     //         const img = new Image();
@@ -111,32 +110,28 @@ const Home = ({loadUSP}) => {
     //   );
     // }
 
-
     function render() {
       const frame = imagesRef.current[airpodsRef.current.frame];
       const canvasWidth = canvasRef.current.width;
       const canvasHeight = canvasRef.current.height;
-      
+
       const frameWidth = 450; // Original width of your frames
       const frameHeight = (frame.height * frameWidth) / frame.width; // Maintain aspect ratio
-    
+
       const xOffset = (canvasWidth - frameWidth) / 2;
       const yOffset = (canvasHeight - frameHeight) / 2;
-    
+
       context.clearRect(0, 0, canvasWidth, canvasHeight);
       context.drawImage(frame, xOffset, yOffset, frameWidth, frameHeight);
     }
-    
-
 
     // Cleanup
     return () => {
       // window.removeEventListener("resize", setCanvasSize);
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
-
   }, []);
-  
+
   // console.log(loading ? "USP Loading" : "USP Complate");
   // console.log(loadUSP(loading));
 
@@ -167,9 +162,7 @@ const Home = ({loadUSP}) => {
     <div className={styles.display1}>
       <div className={styles.first_timeline_outer}>
         <div className={styles.first_timeline_inner}>
-          <div className={styles.timeline_animation_text}>
-            Our Expertise
-          </div>
+          <div className={styles.timeline_animation_text}>Our Expertise</div>
           <div className={styles.timeline_animation_text_One}>
             <p>Crafting Aluminium. Elevating Enterprises.</p>
           </div>
@@ -177,15 +170,18 @@ const Home = ({loadUSP}) => {
             {/* <div className={styles.line}></div> */}
             <div className={styles.section}>
               {/* <div className={styles.bead}></div> */}
-              <div 
-              className={`${styles.contentX} triggered-element`}
-              >
+              <div className={`${styles.contentX} triggered-element`}>
                 {/* <p className={styles.timeline_number}>01</p> */}
-                <h2 className={styles.twoo}>Vacuum Pressure Treatment</h2>
+                <h2 className={styles.twoo}>General Engineering</h2>
+                <p className={styles.contentInner}>
+                  Forging the Backbone of Industry
+                </p>
                 <p className={styles.timeline_sec_comment}>
-                  The only plywood in India made with 100% scientifically
-                  researched proprietary Vacuum Pressure Chemical Treated veneer
-                  to provide protection against termites, borers and fire
+                  Our aluminium extrusion empower precision and resilience in a
+                  range of engineering applications. From robust framework to
+                  intricate machine components, we deliver tailored solutions
+                  that ensure strength, reliability, and efficiency in every
+                  project, helping our B2B partners innovate with confidence.
                 </p>
               </div>
             </div>
@@ -193,11 +189,16 @@ const Home = ({loadUSP}) => {
               {/* <div className={styles.bead}></div> */}
               <div className={`${styles.contentX} triggered-element`}>
                 {/* <p className={styles.timeline_number}>02</p> */}
-                <h2 className={styles.twoo}>Fully Composed Core & Panels</h2>
+                <h2 className={styles.twoo}>Renewables</h2>
+                <p className={styles.contentInner}>
+                  Advancing a Greener Tomorrow
+                </p>
                 <p className={styles.timeline_sec_comment}>
-                  100% composed veneer sheets made using sophisticated core and
-                  panel composers to ensure precise manufacturing of high
-                  quality plywood
+                  Our extrusions are engineered for the renewable energy sector,
+                  providing lightweight yet durable solutions for solar modules,
+                  wind power structures, and more. We fuel the transition to
+                  sustainable power, supporting clients who are building a
+                  cleaner, more efficient future.
                 </p>
               </div>
             </div>
@@ -205,10 +206,14 @@ const Home = ({loadUSP}) => {
               {/* <div className={styles.bead}></div> */}
               <div className={`${styles.contentX} triggered-element`}>
                 {/* <p className={styles.timeline_number}>03</p> */}
-                <h2 className={styles.twoo}>100% Phenolic Resins</h2>
+                <h2 className={styles.twoo}>Architecture</h2>
+                <p className={styles.contentInner}>Shaping Iconic Skylines</p>
                 <p className={styles.timeline_sec_comment}>
-                  100% BWP grade high solid phenolic polymers ensures excellent
-                  bonding and waterproof properties.
+                  We collaborate with visionary architects and builders to bring
+                  modern structures to life. Our customizable aluminium profiles
+                  enable sleek facades, striking interiors, and enduring
+                  exteriors, blending form and function for landmark buildings
+                  that redefine the spaces they occupy.
                 </p>
               </div>
             </div>
@@ -216,57 +221,33 @@ const Home = ({loadUSP}) => {
               {/* <div className={styles.bead}></div> */}
               <div className={`${styles.contentX} triggered-element`}>
                 {/* <p className={styles.timeline_number}>04</p> */}
-                <h2 className={styles.twoo}>Termite & Borer Proof</h2>
+                <h2 className={styles.twoo}>Furniture</h2>
+                <p className={styles.contentInner}>Design Meets Durability</p>
                 <p className={styles.timeline_sec_comment}>
-                  Shielded against microbes, viruses, bacteria, fungi, termites,
-                  and borers in their favourable conditions.
+                  With a commitment to aesthetics and endurance, our aluminium
+                  profiles help furniture makers create distinctive products.
+                  From minimalist designs to ergonomic innovations, we provide
+                  the components that bring versatility, style, and lasting
+                  quality into commercial and workspace environments.
                 </p>
               </div>
             </div>
-            <div className={styles.section}>
-              {/* <div className={styles.bead}></div> */}
-              <div className={`${styles.contentX} triggered-element`}>
-                {/* <p className={styles.timeline_number}>05</p> */}
-                <h2 className={styles.twoo}>Fire Resistant</h2>
-                <p className={styles.timeline_sec_comment}>
-                  Fully vacuum pressure-treated veneer with fire-retardant
-                  chemical containing nano particles, and organ phosphorus
-                  chemicals used during the process, providing excellent
-                  fire-retardant properties.
-                </p>
-              </div>
-            </div>
-            <div className={styles.section}>
-              {/* <div className={styles.bead}></div> */}
-              <div className={`${styles.contentX} triggered-element`}>
-                {/* <p className={styles.timeline_number}>06</p> */}
-                <h2 className={styles.twoo}>Boiling Water Proof</h2>
-                <p className={styles.timeline_sec_comment}>
-                  100% BWP grade high solid phenolic polymers ensures excellent
-                  bonding and waterproof properties.
-                </p>
-              </div>
-            </div>
-            <div className={styles.section}>
-              {/* <div className={styles.bead}></div> */}
-              <div className={`${styles.contentX} triggered-element`}>
-                {/* <p className={styles.timeline_number}>07</p> */}
-                <h2 className={styles.twoo}>High Screw & Nail Holding Capacity</h2>
-                <p className={styles.timeline_sec_comment}>
-                  made from all composed full sheet veneers of select hardwood
-                  species, ensuring a robust and well-structured plywood.
-                </p>
-              </div>
-            </div>
-          
           </div>
         </div>
 
         <div className={styles.canvas_side_outer}>
           <section className={styles.sectionX} ref={sectionRef}>
-            <canvas  className={styles.canvas_layer} ref={canvasRef}></canvas>
+            <canvas className={styles.canvas_layer} ref={canvasRef}></canvas>
           </section>
         </div>
+      </div>
+      <div className={styles.OuterTimelineContent}>
+        <p>
+          From robust standard sections to complex custom profiles, our advanced
+          facility near Ahmedabad delivers reliability across every extrusion.
+          We partner with top architects, OEMs, infrastructure developers, and
+          manufacturers with tailored solutions for
+        </p>
       </div>
     </div>
   );
