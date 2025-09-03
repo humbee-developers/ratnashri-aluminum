@@ -22,20 +22,24 @@ function AboutExperience() {
                 },
               }}
               viewport={{ once: true }}
-              className="heading">One Aluminium. Endless Possibilities</motion.div>
+              className="heading"
+            >
+              One Aluminium. Endless Possibilities
+            </motion.div>
             <div className="content">
               {
                 "Aluminium’s versatility powers solutions across industries and challenges. From enabling sustainable architecture and renewable energy to elevating advanced engineering and innovative furniture design, our extrusions adapt to every vision. With Ratnashri Aluminium, a single material unlocks limitless innovation—built to empower your boldest business ambitions."
               }
             </div>
-
-
-
-
           </div>
         </div>
         <div className="img">
-          <Image src={image1} className="image2" width="100%" alt="none"></Image>
+          <Image
+            src={image1}
+            className="image2"
+            width="100%"
+            alt="none"
+          ></Image>
           {/* <div className="yearsofexp">
             <div className="roundbackground">1</div>
             <div className="roundbackground">3</div>

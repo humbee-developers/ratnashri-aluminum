@@ -1,6 +1,7 @@
 
 .aboutExperience {
   overflow-x: hidden;
+  padding-top: 4rem;
   &_wrapper {
     display: flex;
     align-items: center;
@@ -38,6 +39,9 @@
           letter-spacing: 0.015em;
           text-align: left;
           // text-transform: uppercase;
+          @media(min-width: 1600px){
+            width: 50%;
+          }
           @media(max-width: 768px){
             width: 100%;
           }

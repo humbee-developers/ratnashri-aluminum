@@ -47,10 +47,6 @@ const Home = ({loadUSP}) => {
 
     setCanvasSize();
     window.addEventListener("resize", setCanvasSize);
-
-
-
-
     const frameCount = 483;
 
     const currentFrame = (index) =>
@@ -174,7 +170,9 @@ const Home = ({loadUSP}) => {
           <div className={styles.timeline_animation_text}>
             Our Expertise
           </div>
-          
+          <div className={styles.timeline_animation_text_One}>
+            <p>Crafting Aluminium. Elevating Enterprises.</p>
+          </div>
           <div className={styles.timeline} ref={container}>
             {/* <div className={styles.line}></div> */}
             <div className={styles.section}>

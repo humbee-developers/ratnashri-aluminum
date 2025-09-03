@@ -38,6 +38,11 @@
   margin-left: 3rem;
   font-weight: 700;
 }
+.timeline_animation_text_One{
+  font-size: 20px;
+  margin-left: 3rem;
+  color: rgba(86, 86, 86, 1);
+}
 
 .canvas_side_outer {
   width: 50%;
@@ -152,10 +157,10 @@
 
   .timeline_animation_text {
     padding-top: 5rem;
-  font-size: 50px;
-  color: #024061;
-  margin-left: 3rem;
-  font-weight: 700;
+    font-size: 50px;
+    color: #024061;
+    margin-left: 3rem;
+    font-weight: 700;
   }
 }
 
@@ -204,7 +209,7 @@
   }
 
   .timeline_animation_text {
-    font-size: 86px;
+    /* font-size: 86px; */
     margin-left: 3rem;
   }
 }
@@ -271,7 +276,7 @@
   }
 
   .timeline_animation_text {
-    font-size: 86px;
+    /* font-size: 86px; */
     margin-left: 3rem;
   }
 }
@@ -313,13 +318,13 @@
   }
 
   .timeline_animation_text {
-    font-size: 86px;
+    font-size: 55px;
     margin-left: 3rem;
   }
 }
 @media (min-width: 1600px) and (max-width: 1700px) {
   .twoo {
-    font-size: 57px;
+    font-size: 55px;
     letter-spacing: 1px;
   }
 
@@ -467,7 +472,7 @@
 @media (max-width: 1440px) {
   .twoo {
     font-weight: 400;
-    font-size: 58px;
+    font-size: 55px;
     line-height: 130%;
     letter-spacing: 1px;
   }
