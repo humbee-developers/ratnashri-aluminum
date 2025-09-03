@@ -123,6 +123,9 @@
         font-weight: 200;
         line-height: 35px;
         letter-spacing: 0.3px;
+        @media(min-width: 1600px){
+          width: 70%;
+        }
         @media(max-width: 991px){
           width: 65%;
         }
@@ -153,6 +156,9 @@
         font-weight: 200;
         line-height: 35px;
         letter-spacing: 0.3px;
+        @media(min-width: 1600px){
+          width: 80%;
+        }
 
         a {
           color: #000;

@@ -59,9 +59,8 @@ const Footer = () => {
               <div className="col2">
                 <h2 id="col2sp">Registered Office</h2>
                 <div className="addressFirst">
-                  Survey No. 1221 (Old Survey No. 672/1-2), B/h Madhu Textiles,
-                  Near Nandasan Crossroads, Village: Rajpur, Taluka: Kadi,
-                  District: Mehsana 382715.
+                  1307, 13th floor, Phoenix, Vijay Cross Roads, Navrangpura,
+                  Ahmedabad, Gujarat 380009, India.
                 </div>
                 {/* <div className="f3">
                 <Link href="/">Products</Link>
