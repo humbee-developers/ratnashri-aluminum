@@ -150,7 +150,7 @@ const Home = ({ loadUSP }) => {
         scrub: 1,
         start: "top 50%",
         end: "bottom 40%",
-        markers: "true",
+        // markers: "true",
       },
       opacity: 1,
       color: "#000",
