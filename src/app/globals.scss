@@ -1,4 +1,3 @@
-
 // @import "../fonts/fonts.scss";
 * {
   margin: 0;
@@ -7,17 +6,20 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: white;
-  color: black;
+  // background-color: white;
+  max-width: 100vw;
+  background-image: url("../images/Img01.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  color: rgba(53, 53, 53, 1);
   transition-property: opacity, transform, filter, background-color;
   transition-timing-function: ease-in-out;
   transition-duration: 800ms;
   overflow-x: hidden;
 }
-.main{
+.main {
   overflow-x: hidden !important;
 }
-
 
 @font-face {
   font-family: "LatoBlack";
@@ -30,35 +32,34 @@ body {
   font-family: "BlackItalic";
   src: local("BlackItalic"),
     url("../../src/fonts/Lato-BlackItalic.ttf") format("truetype");
-    font-display: swap;
+  font-display: swap;
 }
 @font-face {
   font-family: "LatoBold";
   src: local("LatoBold"),
     url("../../src/fonts/Lato-Bold.ttf") format("truetype");
-    font-display: swap;
+  font-display: swap;
   font-weight: normal;
 }
 @font-face {
   font-family: "LatoItalic";
   src: local("LatoItalic"),
     url("../../src/fonts/Lato-Italic.ttf") format("truetype");
-    font-display: swap;
+  font-display: swap;
 }
 @font-face {
   font-family: "LatoLight";
   src: local("LatoLight"),
     url("../../src/fonts/Lato-Light.ttf") format("truetype");
-    font-display: swap;
+  font-display: swap;
   font-weight: normal;
 }
 @font-face {
   font-family: "LatoRegular";
   src: local("LatoRegular"),
     url("../../src/fonts/Lato-Regular.ttf") format("truetype");
-    font-display: swap;
+  font-display: swap;
 }
-
 
 h1 {
   font-family: "LatoRegular";
@@ -96,7 +97,7 @@ ul {
   li {
     font-family: "LatoRegular";
   }
-} 
+}
 
 input {
   font-family: "LatoRegular";

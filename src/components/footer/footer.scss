@@ -1,6 +1,6 @@
 .footer {
   // background: black;
-  color: #000;
+  color: rgba(0, 0, 0, 1);
   padding: 60px 50px;
   position: relative;
 
@@ -36,6 +36,7 @@
 
       p {
         font-size: 17px;
+        color: rgba(0, 0, 0, 1);
         font-style: normal;
         font-weight: 200;
         line-height: 35px;
@@ -118,7 +119,7 @@
 
       .addressFirst {
         // width: 50%;
-        font-size: 17px;
+        font-size: 20px;
         font-style: normal;
         font-weight: 200;
         line-height: 35px;
@@ -151,9 +152,7 @@
       }
 
       .address {
-        font-size: 17px;
-        font-style: normal;
-        font-weight: 200;
+        font-size: 20px;
         line-height: 35px;
         letter-spacing: 0.3px;
         @media(min-width: 1600px){
@@ -161,7 +160,7 @@
         }
 
         a {
-          color: #000;
+          color: rgba(0, 0, 0, 1);
           text-decoration: none;
           transition: all 0.3s;
           font-weight: 400;
@@ -173,7 +172,7 @@
       }
 
       .link a {
-        color: #000;
+        color: rgba(0, 0, 0, 1);
         text-decoration: none;
         font-size: 17px;
         font-style: normal;
@@ -210,13 +209,13 @@
 
   .f3 {
     a {
-      font-size: 17px;
+      font-size: 20px;
       font-style: normal;
-      font-weight: 200;
+      // font-weight: 200;
       line-height: 35px;
       letter-spacing: 0.3px;
       // text-transform: capitalize;
-      color: #000;
+      color: rgba(0, 0, 0, 1);
       text-decoration: none;
       transition: all 0.3s;
 
@@ -250,7 +249,7 @@
     }
 
     .copyright_text {
-      color: #000;
+      color: rgba(0, 0, 0, 1);
       font-size: 17px;
       text-align: center;
       font-style: normal;
