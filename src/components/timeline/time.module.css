@@ -5,6 +5,7 @@
   display: flex;
   font-weight: 400;
   color: black;
+
 }
 .first_timeline_inner {
   width: 50%;
@@ -32,7 +33,7 @@
 }
 
 .timeline_animation_text {
-  padding-top: 5rem;
+  padding-top: 10rem;
   font-size: 50px;
   color: #024061;
   margin-left: 3rem;
@@ -105,6 +106,7 @@
 .timeline_sec_comment {
   font-size: 19px;
   font-weight: 300;
+  color: rgba(53, 53, 53, 1);
 }
 
 .contentX {
@@ -116,8 +118,10 @@
   opacity: 0;
 }
 .OuterTimelineContent {
-  padding: 0 150px;
-  font-size: 22px;
+  padding: 0 50px;
+  font-size: 20px;
+  color: #353535;
+  font-family: "LatoRegular";
 }
 
 @media (min-width: 2401px) and (max-width: 2560px) {
@@ -572,7 +576,7 @@
 
 @media (max-width: 1180px) {
   .OuterTimelineContent {
-    padding: 0 100px;
+    padding: 0 50px;
     font-size: 22px;
   }
 
@@ -802,7 +806,7 @@
     display: block;
   }
   .OuterTimelineContent {
-    padding: 0 100px;
+    padding: 0 50px;
     font-size: 22px;
   }
 
@@ -962,6 +966,7 @@
   .timeline_animation_text {
     margin-left: 2rem;
     font-size: 40px;
+    padding-top: 5rem;
   }
   .twoo {
     width: 100%;
