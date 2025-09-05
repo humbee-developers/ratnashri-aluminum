@@ -49,7 +49,7 @@ function DifferenceSection() {
             </div>
             {/*  */}
             <div>
-                <motion.div className="ContentInnerDiff">
+                <div className="ContentInnerDiff">
                     <motion.p
                       initial={{
                             opacity: 0,
@@ -64,7 +64,7 @@ function DifferenceSection() {
                         }}
                         viewport={{ once: true }}
                         >Ratnashri Aluminium, an ISO 9001 and 14001 certified leader, specializes in precision aluminium extrusions for the boldest business projects. With a legacy of manufacturing excellence, we don’t just supply profiles—we empower progress for the world’s most demanding industries through quality, scale, and relentless innovation.</motion.p>
-                </motion.div>
+                </div>
             </div>
         </div>
     );

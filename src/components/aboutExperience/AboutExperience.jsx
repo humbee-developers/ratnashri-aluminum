@@ -1,7 +1,7 @@
 import "./aboutExperience.scss";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import image1 from "../../images/expbanner.png";
+import image1 from "../../images/aluminium01.png";
 
 function AboutExperience() {
   return (
