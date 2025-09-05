@@ -35,7 +35,11 @@
 .timeline_animation_text {
   padding-top: 10rem;
   font-size: 50px;
-  color: #024061;
+  /* color: #024061; */
+     background: linear-gradient(90deg, rgba(5, 132, 199, 1) 0%, rgba(2, 64, 97, 1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
   margin-left: 3rem;
   font-weight: 700;
 }
@@ -56,11 +60,15 @@
   /* margin-bottom: 5rem; */
 }
 .twoo {
-  font-weight: 400;
+  font-weight: 600;
   font-size: 40px;
   line-height: 130%;
   letter-spacing: 1px;
-  color: #024061;
+     background: linear-gradient(90deg, rgba(5, 132, 199, 1) 0%, rgba(2, 64, 97, 1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  /* color: #024061; */
 }
 .contentInner {
   font-size: 22px;

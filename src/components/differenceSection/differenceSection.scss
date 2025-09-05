@@ -1,73 +1,81 @@
 .DifferenceSec {
-    padding: 0 50px;
-    overflow-x: hidden;
+  padding: 0 50px;
+  overflow-x: hidden;
 
-    @media(max-width: 575px) {
-        padding: 0 30px;
+  @media (max-width: 575px) {
+    padding: 0 30px;
+  }
+
+  .DifferenceSecHeading {
+    .HeadingSec {
+      background: linear-gradient(
+        90deg,
+        rgba(5, 132, 199, 1) 0%,
+        rgba(2, 64, 97, 1) 100%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+      padding-top: 150px;
+      @media (max-width: 991px) {
+        padding-top: 100px;
+      }
+      @media (max-width: 575px) {
+        padding-top: 50px;
+      }
+      p {
+        font-size: 50px;
+        font-weight: 700;
+        color: rgb(2, 64, 97);
+        @media (max-width: 475px) {
+          font-size: 30px;
+        }
+      }
     }
 
-    .DifferenceSecHeading {
-        .HeadingSec {
-            padding-top: 150px;
-            @media(max-width: 991px){
-                padding-top: 100px;
-            }
-            @media(max-width: 575px){
-                padding-top: 50px;
-            }
-            p {
-                font-size: 50px;
-                font-weight: 700;
-                color: rgb(2, 64, 97);
-                @media(max-width: 475px){
-                    font-size: 30px;
-                }
-            }
-        }
+    .ContentSec {
+      padding: 20px 0;
 
-        .ContentSec {
-            padding: 20px 0;
-
-            p {
-                font-size: 25px;
-                color: rgba(86, 86, 86, 1);
-                @media(max-width: 575px){
-                    font-size: 20px;
-                }
-            }
+      p {
+        font-size: 25px;
+        color: rgba(86, 86, 86, 1);
+        @media (max-width: 575px) {
+          font-size: 20px;
         }
+      }
+    }
+  }
+
+  .ImageSectionInner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 50px 0;
+    @media (max-width: 768px) {
+      padding: 30px 0;
+      justify-content: center;
+    }
+    @media (max-width: 575px) {
+      padding: 20px 0;
     }
 
-    .ImageSectionInner {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        padding: 50px 0;
-        @media(max-width: 768px){
-            padding: 30px 0;
-            justify-content: center;
-        }
-        @media(max-width: 575px){
-            padding: 20px 0;
-        }
-
-        .ImageSectionImg {
-            img {
-                max-width: 100%;
-                height: auto;
-            }
-        }
+    .ImageSectionImg {
+      img {
+        max-width: 100%;
+        height: auto;
+      }
     }
+  }
 
-    .ContentInnerDiff {
-        padding-top: 2rem;
-        p {
-            letter-spacing: 0.3px;
-            font-size: 17px;
-            color: rgba(53, 53, 53, 1);
-            font-style: normal;
-            font-weight: 200;
-            line-height: 30px;
-        }
+  .ContentInnerDiff {
+    padding-top: 2rem;
+    p {
+      letter-spacing: 0.3px;
+      font-size: 17px;
+      color: rgba(53, 53, 53, 1);
+      font-style: normal;
+      font-weight: 200;
+      line-height: 30px;
     }
+  }
 }

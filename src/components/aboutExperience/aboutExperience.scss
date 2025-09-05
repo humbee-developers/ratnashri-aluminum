@@ -30,6 +30,10 @@
           padding: 30px 20px;
         }
         .heading {
+           background: linear-gradient(90deg, rgba(5, 132, 199, 1) 0%, rgba(2, 64, 97, 1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
           width: 70%;
           font-size: 50px;
           margin-bottom: 20px;

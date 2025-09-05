@@ -23,7 +23,7 @@ function PrecisionSection() {
                                 duration: 1.5,
                             },
                         }}
-                        viewport={{ once: true }}>Precision Dies.</motion.p>
+                        viewport={{ once: true }} style={{display: "block"}}>Precision Dies.</motion.p>
                     <motion.p
                         initial={{
                             opacity: 0,
@@ -36,7 +36,7 @@ function PrecisionSection() {
                                 duration: 1.5,
                             },
                         }}
-                        viewport={{ once: true }}>Seamless Extrusions.</motion.p>
+                        viewport={{ once: true }} style={{display: "inline-block"}}>Seamless Extrusions.</motion.p>
                 </div>
             </div>
             {/*  */}
