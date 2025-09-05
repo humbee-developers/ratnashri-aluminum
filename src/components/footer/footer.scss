@@ -129,8 +129,8 @@
         font-style: normal;
         font-family: "LatoLight";
         font-weight: 500;
-        line-height: 35px;
-        letter-spacing: 0.3px;
+        line-height: 30px;
+        // letter-spacing: 0.3px;
         @media (min-width: 1600px) {
           width: 70%;
         }
@@ -162,8 +162,8 @@
         font-size: 20px;
         font-family: "LatoLight";
         font-weight: 500;
-        line-height: 35px;
-        letter-spacing: 0.3px;
+        line-height: 30px;
+        // letter-spacing: 0.3px;
         @media (min-width: 1600px) {
           width: 80%;
         }
@@ -285,6 +285,8 @@
         width: 50%;
         font-family: "LatoLight";
         font-weight: 500;
+        line-height: 25px;
+        padding-top: 1rem;
 
         @media (max-width: 1024px) {
           width: 70%;

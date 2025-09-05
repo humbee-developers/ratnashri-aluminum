@@ -1,8 +1,11 @@
+"use client"
 import "./footer.scss";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import facebook from "../../images/facebook.svg";
 import instagram from "../../images/instagram.svg";
 import youtube from "../../images/youtube.svg";
+
 import whatsapp from "../../images/whatsapp.svg";
 import linkedin from "../../images/linkedin.svg";
 import Logo1 from "../../images/Logo1.png";
@@ -123,7 +126,21 @@ const Footer = () => {
             </div>
           </div>
           <div className="copyright">
-            <div className="copyright_text">
+            <motion.div
+              initial={{
+                opacity: 0,
+                y: 80,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: {
+                  duration: 1.5,
+                },
+              }}
+              viewport={{ once: true }}
+              className="copyright_text"
+            >
               <Link href={"/"}>
                 <Image src={Logo1} alt="none" />
               </Link>
@@ -144,7 +161,7 @@ const Footer = () => {
                   {"H/DS"}
                 </Link>
               </span> */}
-            </div>
+            </motion.div>
             {/* <div className="icons">
               <Link href="https://www.facebook.com/raajsolarpv" target="_blank">
                 <div className="icon">

@@ -7,75 +7,75 @@ import image3 from "../../images/sec3.png";
 import image4 from "../../images/sec4.png";
 
 function PrecisionSection() {
-    return (
-        <div className="PrecisionSec">
-            <div className="PrecisionSecHeading">
-                <div className="PrecisionHeadingSec">
-                    <motion.p
-                        initial={{
-                            opacity: 0,
-                            y: 80,
-                        }}
-                        whileInView={{
-                            opacity: 1,
-                            y: 0,
-                            transition: {
-                                duration: 1.5,
-                            },
-                        }}
-                        viewport={{ once: true }} style={{display: "block"}}>Precision Dies.</motion.p>
-                    <motion.p
-                        initial={{
-                            opacity: 0,
-                            y: 80,
-                        }}
-                        whileInView={{
-                            opacity: 1,
-                            y: 0,
-                            transition: {
-                                duration: 1.5,
-                            },
-                        }}
-                        viewport={{ once: true }} style={{display: "inline-block"}}>Seamless Extrusions.</motion.p>
-                </div>
-            </div>
-            {/*  */}
-            <div className="PrecisionImageSectionMain">
-                <div className="PrecisionImageSectionInner">
-                    <div className="PrecisionImageSectionImg">
-                        <Image src={image1} alt="none" />
-                    </div>
-                    <div className="PrecisionImageSectionImg">
-                        <Image src={image2} alt="none" />
-                    </div>
-                    <div className="PrecisionImageSectionImg">
-                        <Image src={image3} alt="none" />
-                    </div>
-                    <div className="PrecisionImageSectionImg">
-                        <Image src={image4} alt="none" />
-                    </div>
-                </div>
-            </div>
-            {/*  */}
-            <div>
-                <div className="PrecisionContentInnerDiff">
-                    <motion.p
-                    initial={{
-                            opacity: 0,
-                            y: 80,
-                        }}
-                        whileInView={{
-                            opacity: 1,
-                            y: 0,
-                            transition: {
-                                duration: 1.5,
-                            },
-                        }}
-                        viewport={{ once: true }}
-                        >At Ratnashri, our in-house die production delivers unmatched precision and speed. Using cutting-edge technology and advanced simulation software like QexDD and Qform, we craft custom and standard dies that perfectly align with your project needs. This streamlined process ensures enhanced efficiency, superior quality, and timely delivery, empowering you with reliable extrusion solutions designed to elevate your business performance.</motion.p>
-                </div>
-            </div>
+  return (
+    <div className="PrecisionSec">
+      <div className="PrecisionSecHeading">
+        <motion.div
+          initial={{
+            opacity: 0,
+            y: 80,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: {
+              duration: 1.5,
+            },
+          }}
+          viewport={{ once: true }}
+          className="PrecisionHeadingSec"
+        >
+          <p style={{ display: "block" }}>Precision Dies.</p>
+          <p style={{ display: "inline-block" }}>Seamless Extrusions.</p>
+        </motion.div>
+      </div>
+      {/*  */}
+      <div className="PrecisionImageSectionMain">
+        <div className="PrecisionImageSectionInner">
+          <div className="PrecisionImageSectionImg">
+            <Image src={image1} alt="none" />
+          </div>
+          <div className="PrecisionImageSectionImg">
+            <Image src={image2} alt="none" />
+          </div>
+          <div className="PrecisionImageSectionImg">
+            <Image src={image3} alt="none" />
+          </div>
+          <div className="PrecisionImageSectionImg">
+            <Image src={image4} alt="none" />
+          </div>
         </div>
-    );
+      </div>
+      {/*  */}
+      <div>
+        <motion.div
+        initial={{
+              opacity: 0,
+              y: 80,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                duration: 1.5,
+              },
+            }}
+            viewport={{ once: true }}
+             className="PrecisionContentInnerDiff">
+          <p
+            
+          >
+            At Ratnashri, our in-house die production delivers unmatched
+            precision and speed. Using cutting-edge technology and advanced
+            simulation software like QexDD and Qform, we craft custom and
+            standard dies that perfectly align with your project needs. This
+            streamlined process ensures enhanced efficiency, superior quality,
+            and timely delivery, empowering you with reliable extrusion
+            solutions designed to elevate your business performance.
+          </p>
+        </motion.div>
+      </div>
+    </div>
+  );
 }
 export default PrecisionSection;
