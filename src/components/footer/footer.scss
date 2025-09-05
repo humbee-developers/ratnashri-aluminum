@@ -1,11 +1,13 @@
 .footer {
   // background: black;
   color: rgba(53, 53, 53, 1);
-  padding: 60px 50px;
-
+  padding: 60px 100px;
   position: relative;
+  @media(max-width: 991px){
+    padding: 60px 50px;
+  }
 
-  @media (max-width: 575px) {
+  @media(max-width: 575px) {
     padding: 60px 20px;
     overflow-x: hidden;
   }
