@@ -2,6 +2,7 @@
 import FirstSection from "@/components/firstSection/page";
 import AboutExperience from "@/components/aboutExperience/AboutExperience";
 import "./globals.scss";
+import Factory from "@/components/factory/page"
 import Timeline from "@/components/timeline/page";
 import Timeline1 from "@/components/timeline/page2";
 import DifferenceSection from "@/components/differenceSection/differenceSection";
@@ -17,6 +18,7 @@ export default function Home() {
       <main className="main">
         <FirstSection />
         <VideoPlayer />
+        <Factory />
         <AboutExperience />
         <DifferenceSection />
         <Timeline />
