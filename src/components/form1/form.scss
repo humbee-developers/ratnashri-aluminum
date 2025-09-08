@@ -6,10 +6,13 @@
   overflow-x: hidden !important;
   justify-content: space-evenly;
   color: #000;
-  @media screen and (max-width: 575px) {
+
+  @media screen and (max-width: 800px) {
     padding: 50px 0px;
     flex-direction: column;
-    display: block;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     overflow-x: hidden !important;
   }
   .yello_btn {
@@ -25,8 +28,13 @@
   }
 }
 .FormInnerTextHeader {
+  width: 50%;
+  @media(max-width: 800px){
+    width: 80%;
+  }
   @media (max-width: 575px) {
-    padding: 0 20px;
+    // padding: 0 20px;
+    width: 80%;
   }
 }
 
