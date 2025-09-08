@@ -33,19 +33,14 @@ function AboutExperience() {
             </div>
           </div>
         </div>
-        <div className="img">
+        {/* <div className="img">
           <Image
             src={image1}
             className="image2"
             width="100%"
             alt="none"
           ></Image>
-          {/* <div className="yearsofexp">
-            <div className="roundbackground">1</div>
-            <div className="roundbackground">3</div>
-            <div className="imagecontent">years of experience</div>
-          </div> */}
-        </div>
+        </div> */}
       </div>
     </div>
   );

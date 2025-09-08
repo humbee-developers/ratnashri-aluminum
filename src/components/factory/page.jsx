@@ -25,52 +25,72 @@ const AirpodsAnimation = ({ loadImage }) => {
     const context = canvas.getContext("2d");
     contextRef.current = context;
 
-    const setCanvasSize = () => {
-      const windowWidth = window.innerWidth;
-      const windowHeight = window.innerHeight;
+    // const setCanvasSize = () => {
+    //   const windowWidth = window.innerWidth;
+    //   const windowHeight = window.innerHeight;
 
-      if (windowWidth >= 1700) {
-        canvas.width = 2000; // Width remains constant for desktop screens
-        canvas.height = windowHeight * 1; // Adjust the height for desktop screens
-      } else if (windowWidth >= 1600) {
-        canvas.width = 1600; // Width remains constant for tablet screens
-        canvas.height = windowHeight * 1; // Adjust the height for tablet screens
-      } else if (windowWidth >= 1599) {
-        canvas.width = 1600; // Width remains constant for tablet screens
-        canvas.height = windowHeight * 1; // Adjust the height for tablet screens
-      } else if (windowWidth >= 1200) {
-        canvas.width = 1600; // Width remains constant for tablet screens
-        canvas.height = windowHeight * 1; // Adjust the height for tablet screens
-      } else if (windowWidth >= 1024) {
-        canvas.width = 1200; // Adjust the width for screen width 1024
-        canvas.height = windowHeight * 1; // Adjust the height for screen width 1024
-      } else if (windowWidth >= 768) {
-        canvas.width = 1200; // Adjust the width for screen width 425
-        canvas.height = windowHeight * 1; // Adjust the height for screen width 425
-      } else if (windowWidth >= 430) {
-        canvas.width = 900; // Adjust the width for screen width 425
-        canvas.height = windowHeight * 1; // Adjust the height for screen width 425
-      } else if (windowWidth >= 425) {
-        canvas.width = 900; // Adjust the width for screen width 425
-        canvas.height = windowHeight * 1; // Adjust the height for screen width 425
-      } else if (windowWidth >= 375) {
-        canvas.width = 800; // Adjust the width for screen width 375
-        canvas.height = windowHeight * 1; // Adjust the height for screen width 425
-      } else if (windowWidth >= 320) {
-        canvas.width = 800; // Adjust the width for screen width 375
-        canvas.height = windowHeight * 1; // Adjust the height for screen width 425
-      } else {
-        canvas.width = 400; // Adjust the width for screen width 320
-        canvas.height = windowHeight * 0.6; // Adjust the height for screen width 320
-      }
+    //   if (windowWidth >= 1700) {
+    //     canvas.width = 2000; // Width remains constant for desktop screens
+    //     canvas.height = windowHeight * 1; // Adjust the height for desktop screens
+    //   } else if (windowWidth >= 1600) {
+    //     canvas.width = 1600; // Width remains constant for tablet screens
+    //     canvas.height = windowHeight * 1; // Adjust the height for tablet screens
+    //   } else if (windowWidth >= 1599) {
+    //     canvas.width = 1600; // Width remains constant for tablet screens
+    //     canvas.height = windowHeight * 1; // Adjust the height for tablet screens
+    //   } else if (windowWidth >= 1200) {
+    //     canvas.width = 1600; // Width remains constant for tablet screens
+    //     canvas.height = windowHeight * 1; // Adjust the height for tablet screens
+    //   } else if (windowWidth >= 1024) {
+    //     canvas.width = 1200; // Adjust the width for screen width 1024
+    //     canvas.height = windowHeight * 1; // Adjust the height for screen width 1024
+    //   } else if (windowWidth >= 768) {
+    //     canvas.width = 1200; // Adjust the width for screen width 425
+    //     canvas.height = windowHeight * 1; // Adjust the height for screen width 425
+    //   } else if (windowWidth >= 430) {
+    //     canvas.width = 900; // Adjust the width for screen width 425
+    //     canvas.height = windowHeight * 1; // Adjust the height for screen width 425
+    //   } else if (windowWidth >= 425) {
+    //     canvas.width = 900; // Adjust the width for screen width 425
+    //     canvas.height = windowHeight * 1; // Adjust the height for screen width 425
+    //   } else if (windowWidth >= 375) {
+    //     canvas.width = 800; // Adjust the width for screen width 375
+    //     canvas.height = windowHeight * 1; // Adjust the height for screen width 425
+    //   } else if (windowWidth >= 320) {
+    //     canvas.width = 800; // Adjust the width for screen width 375
+    //     canvas.height = windowHeight * 1; // Adjust the height for screen width 425
+    //   } else {
+    //     canvas.width = 400; // Adjust the width for screen width 320
+    //     canvas.height = windowHeight * 0.6; // Adjust the height for screen width 320
+    //   }
 
-      ScrollTrigger.update();
-    };
+    //   ScrollTrigger.update();
+    // };
+
+
+      const setCanvasSize = () => {
+    const originalWidth = 1632;
+    const originalHeight = 918;
+    const aspectRatio = originalWidth / originalHeight;
+    const availableWidth = window.innerWidth;
+
+    if (availableWidth < 200) {
+      canvas.width = originalWidth / 2;
+      canvas.height = originalHeight / 2;
+      canvas.style.width = "1301px";
+      canvas.style.height = "100vh";
+    } else {
+      canvas.width = originalWidth;
+      canvas.height = originalHeight;
+      canvas.style.width = "100%";
+      canvas.style.height = "100vh";
+    }
+  };
 
     setCanvasSize();
     window.addEventListener("resize", setCanvasSize);
 
-    const frameCount = 160;
+    const frameCount = 263;
     const currentFrame = (index) =>
       `/Machine_Frames/${(
         index + 0
