@@ -9,25 +9,25 @@ const steps = [
   {
     step: "1",
     title: "Advancing",
-    texts: [
-      "Register on the bSuite app.",
-      "Get trained in our billboard academy."
-    ]
+    // texts: [
+    //   "Register on the bSuite app.",
+    //   "Get trained in our billboard academy."
+    // ]
   },
   {
     step: "2",
     title: "Sustainability",
-    texts: ["It could be anyone who needs their business to become famous."]
+    // texts: ["It could be anyone who needs their business to become famous."]
   },
   {
     step: "3",
     title: "Efficiency",
-    texts: ["It may be a key location close to their business, or a location that will expose them to new audiences. The possibilities are endless."]
+    // texts: ["It may be a key location close to their business, or a location that will expose them to new audiences. The possibilities are endless."]
   },
   {
     step: "4",
     title: "Tomorrow’s growth",
-    texts: ["Sign the contract and send the payment."]
+    // texts: ["Sign the contract and send the payment."]
   },
   // {
   //   step: "5",
@@ -47,54 +47,61 @@ const CarouselSection = () => {
   const slideRefs = useRef([]);
   const [activeIndex, setActiveIndex] = useState(0);
 
-  useEffect(() => {
-    const container = containerRef.current;
-    const slides = slideRefs.current;
+ useEffect(() => {
+  const container = containerRef.current;
+  const slides = slideRefs.current;
 
-    gsap.set(slides, {
-      xPercent: window.innerWidth < 768 ? 125 : 0,
-      yPercent: window.innerWidth > 768 ? 125 : 0,
-      scale: 0.5,
-      opacity: 0
-    });
+  gsap.set(slides, {
+    yPercent: 125,
+    opacity: 0,
+    scale: 0.5
+  });
 
-    const tl = gsap.timeline({
-      defaults: { ease: "none" }
-    });
+  const tl = gsap.timeline({
+    defaults: { ease: "none" }
+  });
 
-    slides.forEach((slide, i) => {
-      if (i === 0) {
-        gsap.set(slide, { yPercent: 0, xPercent: 0, opacity: 1, scale: 1 });
-        tl.add(`our-work-${i + 1}`, "+=0");
-      } else {
-        tl.to(slideRefs.current[i], { opacity: 1, yPercent: 0, xPercent: 0, scale: 1 }, `>`)
-          .to(slideRefs.current[i - 1], { opacity: 0, yPercent: window.innerWidth > 768 ? -125 : 0, xPercent: window.innerWidth < 768 ? -125 : 0, scale: 0.5 }, "<")
-          .add(`our-work-${i + 1}`);
-      }
-    });
+  slides.forEach((slide, i) => {
+    if (i === 0) {
+      gsap.set(slide, { yPercent: 0, opacity: 1, scale: 1 });
+      tl.add(`our-work-${i + 1}`, "+=0");
+    } else {
+      tl.to(slideRefs.current[i], {
+        opacity: 1,
+        yPercent: 0,
+        scale: 1
+      }, ">")
+        .to(slideRefs.current[i - 1], {
+          opacity: 0,
+          yPercent: -125,
+          scale: 0.5
+        }, "<")
+        .add(`our-work-${i + 1}`);
+    }
+  });
 
-    ScrollTrigger.create({
-      animation: tl,
-      id: "st",
-      trigger: container,
-      start: "top top",
-      end: "+=" + container.clientHeight * (steps.length - 1),
-      pin: container,
-      scrub: true,
-      snap: { snapTo: 1 / (steps.length - 1) },
-      markers: false,
-      onUpdate: self => {
-        const index = Math.round(self.progress * (steps.length - 1));
-        setActiveIndex(index);
-      }
-    });
+  ScrollTrigger.create({
+    animation: tl,
+    id: "st",
+    trigger: container,
+    start: "top top",
+    end: "+=" + container.clientHeight * (slides.length - 1),
+    pin: container,
+    scrub: true,
+    snap: { snapTo: 1 / (slides.length - 1) },
+    markers: false,
+    onUpdate: self => {
+      const index = Math.round(self.progress * (slides.length - 1));
+      setActiveIndex(index);
+    }
+  });
 
-    // Clean up triggers/timelines on unmount
-    return () => {
-      ScrollTrigger.getById("st")?.kill();
-      tl.kill();
-    };
-  }, []);
+  return () => {
+    ScrollTrigger.getById("st")?.kill();
+    tl.kill();
+  };
+}, []);
+
 
   // Navigation dot click
   // const handleNavClick = idx => {
@@ -108,47 +115,37 @@ const CarouselSection = () => {
   //   setActiveIndex(idx);
   // };
 
-  return (
+ return (
   <section id="work" className="work-section" ref={containerRef}>
     <div className="work-grid">
-      {/* <div className="work-title">
-        <h1>How does it</h1>
-      </div> */}
-      <div className="work-slider">
+      <div className="work-left">
+        <h2 className="blurred-box__title fixed-title">
+          {steps[0].title}
+        </h2>
+      </div>
+
+      <div className="work-right">
         <div className="carousel__slider">
-          {steps.map((step, i) => (
+          {steps.slice(1).map((step, i) => (
             <div
               key={i}
               className="carousel__item"
-              ref={el => (slideRefs.current[i] = el)}
-              style={{ position: "absolute", top: 0, width: "100%" }}
+              ref={(el) => (slideRefs.current[i] = el)}
             >
-              {/* <div className="blurred-box__step">{step.step}</div> */}
               <h2 className="blurred-box__title">{step.title}</h2>
-              {/* <div className="blurred-box__footer">
-                <span className="blurred-box__footer-line"></span>
-                {step.texts.map((text, idx) => (
-                  <p className="blurred-box__text" key={idx}>
-                    {text}
-                  </p>
-                ))}
-              </div> */}
+              {/* {step.texts.map((text, idx) => (
+                <p className="blurred-box__text" key={idx}>
+                  {text}
+                </p>
+              ))} */}
             </div>
           ))}
         </div>
-        {/* <ul className="carousel__nav" ref={navRef}>
-          {steps.map((_, i) => (
-            <li
-              key={i}
-              className={`carousel__nav__item${activeIndex === i ? " carousel__nav__item--active" : ""}`}
-              onClick={() => handleNavClick(i)}
-            ></li>
-          ))}
-        </ul> */}
       </div>
     </div>
   </section>
 );
+
 };
 
 export default CarouselSection;
