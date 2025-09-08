@@ -73,6 +73,9 @@
           line-height: 163.523%; /* 22.893px */
           letter-spacing: 0.21px;
           // text-transform: capitalize;
+          @media(min-width: 1600px){
+            font-size: 20px;
+          }
           @media (max-width: 767px) { 
             font-size: 17px;
           }
