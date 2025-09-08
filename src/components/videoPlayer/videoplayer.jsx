@@ -25,7 +25,7 @@ export default function VideoPlayer() {
       <video
         ref={videoRef}
         className={styles.video}
-        src="video/video2.mp4"
+        src="video/finalVideo.mp4"
         preload="metadata"
         onClick={togglePlayPause}
       />
