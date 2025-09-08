@@ -67,25 +67,24 @@ const AirpodsAnimation = ({ loadImage }) => {
     //   ScrollTrigger.update();
     // };
 
+    const setCanvasSize = () => {
+      const originalWidth = 1632;
+      const originalHeight = 918;
+      const aspectRatio = originalWidth / originalHeight;
+      const availableWidth = window.innerWidth;
 
-      const setCanvasSize = () => {
-    const originalWidth = 1632;
-    const originalHeight = 918;
-    const aspectRatio = originalWidth / originalHeight;
-    const availableWidth = window.innerWidth;
-
-    if (availableWidth < 200) {
-      canvas.width = originalWidth / 2;
-      canvas.height = originalHeight / 2;
-      canvas.style.width = "1301px";
-      canvas.style.height = "100vh";
-    } else {
-      canvas.width = originalWidth;
-      canvas.height = originalHeight;
-      canvas.style.width = "100%";
-      canvas.style.height = "100vh";
-    }
-  };
+      if (availableWidth < 200) {
+        canvas.width = originalWidth / 2;
+        canvas.height = originalHeight / 2;
+        canvas.style.width = "1301px";
+        canvas.style.height = "100vh";
+      } else {
+        canvas.width = originalWidth;
+        canvas.height = originalHeight;
+        canvas.style.width = "100%";
+        canvas.style.height = "100vh";
+      }
+    };
 
     setCanvasSize();
     window.addEventListener("resize", setCanvasSize);
@@ -94,13 +93,9 @@ const AirpodsAnimation = ({ loadImage }) => {
     // const prefix = process.env.NODE_ENV === "production" ? "/ratnashri-aluminum" : "";
     const currentFrame = (index) =>
       // `${prefix}/Machine_Frames/${(
-        `/Machine_Frames/${(
-        index + 0
-      )
-        .toString()
-        .padStart(3, "0")}.png`;
-        // https://plywoodassets.royaletouche.com/assets/newframes/factoryzoom/F000.webp
-        // https://plywoodassets.royaletouche.com/assets/compressed/factoryzoom/F000.jpg
+      `/Machine_Frames/${(index + 0).toString().padStart(3, "0")}.png`;
+    // https://plywoodassets.royaletouche.com/assets/newframes/factoryzoom/F000.webp
+    // https://plywoodassets.royaletouche.com/assets/compressed/factoryzoom/F000.jpg
     let imgL = [];
 
     for (let i = 0; i < frameCount; i++) {
