@@ -1,6 +1,6 @@
 .work-grid {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 1fr;
   height: 100vh;
   position: relative;
 
@@ -15,8 +15,8 @@
   height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 2rem;
+  justify-content: end;
+  // padding: 2rem;
 
   .fixed-title {
     font-size: 80px;
@@ -35,12 +35,14 @@
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
   overflow: hidden;
+  padding: 0 2rem;
 
   .carousel__slider {
     position: relative;
-    width: 100%;
+    // width: 100%;
+    width: auto;
     // min-height: 300px;
      min-height: 85px;
   }
