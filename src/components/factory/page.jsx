@@ -148,7 +148,7 @@ const AirpodsAnimation = ({ loadImage }) => {
           trigger: section,
           pin: true,
           scrub: 1.5,
-          end: "+=150%",
+          end: "+=500%",
         },
       })
       .to(airpodsRef.current, {

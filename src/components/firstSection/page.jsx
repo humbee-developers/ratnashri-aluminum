@@ -33,7 +33,7 @@ const FirstSection = () => {
             },
           }}
           viewport={{ once: true }}
-          className="InnerWapper">Aluminium Extrusions</motion.p>
+          className="InnerWapper" id="Wrap">Aluminium Extrusions</motion.p>
 
       </div>
 
