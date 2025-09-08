@@ -46,6 +46,7 @@
 .timeline_animation_text_One {
   font-size: 25px;
   margin-left: 3rem;
+  /* padding-bottom: 2rem; */
   color: rgba(86, 86, 86, 1);
 }
 
@@ -970,6 +971,7 @@
 @media (max-width: 575px) {
   .timeline_animation_text_One {
     margin-left: 2rem;
+    /* padding-bottom: 2rem; */
   }
   .timeline_animation_text {
     margin-left: 2rem;
