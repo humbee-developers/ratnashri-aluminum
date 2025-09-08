@@ -91,8 +91,9 @@ const AirpodsAnimation = ({ loadImage }) => {
     window.addEventListener("resize", setCanvasSize);
 
     const frameCount = 263;
+    const prefix = process.env.NODE_ENV === "production" ? "/ratnashri-aluminum" : "";
     const currentFrame = (index) =>
-      `/Machine_Frames/${(
+      `${prefix}/Machine_Frames/${(
         index + 0
       )
         .toString()
