@@ -1,13 +1,9 @@
 import { useRef, useEffect } from "react";
 import Image from "next/image";
-import usp1 from "@/images/ix1x.jpg";
-import usp2 from "@/images/ix2x.jpg";
-import usp3 from "@/images/ix3x.jpg";
-import usp4 from "@/images/ix4x.jpg";
-import usp5 from "@/images/ix5x.jpg";
-import usp6 from "@/images/ix6x.jpg";
-// import usp7 from "@/images/ix7x.jpg";
-import usp8 from "@/images/alone.jpg";
+import usp1 from "@/images/fan.png";
+import usp2 from "@/images/building.png";
+import usp3 from "@/images/solar.png";
+import usp4 from "@/images/furniture.png";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
 import styles from "@/components/timeline/time.module.css";
@@ -65,11 +61,31 @@ const Page2 = () => {
                 </p>
               </div>
             </div>
-            <div className={styles.section}>
+             <div className={styles.section}>
               {/* <div className={styles.bead}></div> */}
               <div className={`${styles.contentX} triggered-element`}>
                 <div className={styles.img_main_outer}>
                   <Image src={usp2} alt="image" className={styles.img_main} />
+                </div>
+                {/* <p className={styles.timeline_number}>03</p> */}
+                <h2 className={styles.twoo}>Architecture</h2>
+                  <p className={styles.contentInner}>Shaping Iconic Skylines</p>
+              
+                <p className={styles.timeline_sec_comment}>
+                    We collaborate with visionary architects and builders to bring
+                  modern structures to life. Our customizable aluminium profiles
+                  enable sleek facades, striking interiors, and enduring
+                  exteriors, blending form and function for landmark buildings
+                  that redefine the spaces they occupy.
+                </p>
+              </div>
+            </div>
+
+            <div className={styles.section}>
+              {/* <div className={styles.bead}></div> */}
+              <div className={`${styles.contentX} triggered-element`}>
+                <div className={styles.img_main_outer}>
+                  <Image src={usp3} alt="image" className={styles.img_main} />
                 </div>
                 {/* <p className={styles.timeline_number}>02</p> */}
                 <h2 className={styles.twoo}>Renewables</h2>
@@ -85,25 +101,7 @@ const Page2 = () => {
                 </p>
               </div>
             </div>
-            <div className={styles.section}>
-              {/* <div className={styles.bead}></div> */}
-              <div className={`${styles.contentX} triggered-element`}>
-                <div className={styles.img_main_outer}>
-                  <Image src={usp3} alt="image" className={styles.img_main} />
-                </div>
-                {/* <p className={styles.timeline_number}>03</p> */}
-                <h2 className={styles.twoo}>Architecture</h2>
-                  <p className={styles.contentInner}>Shaping Iconic Skylines</p>
-              
-                <p className={styles.timeline_sec_comment}>
-                    We collaborate with visionary architects and builders to bring
-                  modern structures to life. Our customizable aluminium profiles
-                  enable sleek facades, striking interiors, and enduring
-                  exteriors, blending form and function for landmark buildings
-                  that redefine the spaces they occupy.
-                </p>
-              </div>
-            </div>
+           
             <div className={styles.section}>
               {/* <div className={styles.bead}></div> */}
               <div className={`${styles.contentX} triggered-element`}>

@@ -11,11 +11,9 @@ import img4 from "@/images/sec4.png";
 // import img8 from "@/images/sec4.png";
 // import img9 from "@/images/sec1.png";
 // import img10 from "@/images/sec2.png";
-
 import { useRef, useEffect } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
-
 import styles from "@/components/real_timeline/real_timeline.module.css";
 const Page = () => {
   const container = useRef(null);
@@ -117,7 +115,6 @@ const Page = () => {
             <div className={styles.timeline_width}>
               <div className={styles.timeline} ref={container}>
                 {/* <div className={styles.line}></div> */}
-
                 <div className={styles.section}>
                   <div className={`${styles.timeline_year} triggered-section`}>
                     General Engineering 

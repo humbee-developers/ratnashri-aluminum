@@ -13,125 +13,102 @@ const Home = ({ loadUSP }) => {
   const imagesRef = useRef([]);
   const airpodsRef = useRef({ frame: 0 });
 
-  useEffect(() => {
-    const section = sectionRef.current;
-    const canvas = canvasRef.current;
-    const text = textRef.current;
-    const context = canvas.getContext("2d");
-    contextRef.current = context;
+ useEffect(() => {
+  const section = sectionRef.current;
+  const canvas = canvasRef.current;
+  const text = textRef.current;
+  const context = canvas.getContext("2d");
+  contextRef.current = context;
 
-    const setCanvasSize = () => {
-      const canvas = canvasRef.current;
-      const originalWidth = 1632;
-      const originalHeight = 918;
-      const aspectRatio = originalWidth / originalHeight;
+  // Set canvas dimensions based on screen size
+  const setCanvasSize = () => {
+    const originalWidth = 1632;
+    const originalHeight = 918;
+    const aspectRatio = originalWidth / originalHeight;
+    const availableWidth = window.innerWidth;
 
-      const availableWidth = window.innerWidth;
-      const availableHeight = window.innerHeight;
-      const heightByWidth = availableWidth / aspectRatio;
+    if (availableWidth < 200) {
+      canvas.width = originalWidth / 2;
+      canvas.height = originalHeight / 2;
+      canvas.style.width = "1301px";
+      canvas.style.height = "100vh";
+    } else {
+      canvas.width = originalWidth;
+      canvas.height = originalHeight;
+      canvas.style.width = "100%";
+      canvas.style.height = "100vh";
+    }
+  };
 
-      if (availableWidth < 200) {
-        canvas.width = originalWidth / 2; // Adjust canvas width for mobile screens
-        canvas.height = originalHeight / 2;
-        canvas.style.width = "1301px"; // Set canvas width to 1301px width to be given according screen Sizes
-        canvas.style.height = "100vh"; // Set canvas height to window height or any height specified
-      } else {
-        canvas.width = originalWidth;
-        canvas.height = originalHeight;
-        canvas.style.width = "100%"; // Set canvas width to 100% of container
-        canvas.style.height = "100vh"; // this will  Allow canvas to maintain aspect ratio
+  setCanvasSize();
+  window.addEventListener("resize", setCanvasSize);
+
+  const frameCount = 215;
+  const currentFrame = (index) =>
+    `/timeline_frames/${(index + 1).toString().padStart(3, "0")}.png`;
+
+  imagesRef.current = []; // Clear in case re-renders
+
+  let loadedImages = 0;
+
+  for (let i = 0; i < frameCount; i++) {
+    const img = new Image();
+    img.src = currentFrame(i);
+    img.onload = () => {
+      loadedImages++;
+      // When first image loads, draw it to canvas
+      if (i === 0) {
+        render();
       }
     };
+    imagesRef.current.push(img);
+  }
 
-    setCanvasSize();
-    window.addEventListener("resize", setCanvasSize);
-    const frameCount = 483;
+  function render() {
+    const frame = imagesRef.current[airpodsRef.current.frame];
+    if (!frame || !frame.complete) return;
 
-    const currentFrame = (index) =>
-      `https://plywoodassets.royaletouche.com/assets/newframes/usp/F${(
-        index + 1
-      )
-        .toString()
-        .padStart(4, "0")}.webp`;
-    // let imgL = [];
-    for (let i = 0; i < frameCount; i++) {
-      let img = new Image();
-      img.src = currentFrame(i);
-      imagesRef.current.push(img);
-      // imgL.push(img.src);
-    }
-    // const loadImages = async () => {
-    //   try {
+    const canvas = canvasRef.current;
+    const context = contextRef.current;
+    const canvasWidth = canvas.width;
+    const canvasHeight = canvas.height;
 
-    //     const loadImagePromises = imgL.map((imageUrl) => {
-    //       return new Promise((resolve) => {
-    //         const img = new Image();
-    //         img.src = imageUrl;
-    //         img.onload = () => resolve();
-    //       });
-    //     });
+    const frameWidth = 450;
+    const frameHeight =
+      (frame.naturalHeight * frameWidth) / frame.naturalWidth;
 
-    //     await Promise.all(loadImagePromises);
-    //     // for (let i = 0; i < 100; i++) console.log(i);
-    //     setLoading(false);
-    //   } catch (error) {
-    //     console.error("Error loading images:", error);
-    //     // Handle error loading images
-    //   }
-    // };
-    // loadImages();
-    // console.log(imgL);
-    gsap
-      .timeline({
-        onUpdate: render,
-        scrollTrigger: {
-          trigger: section,
-          pin: true,
-          scrub: 1.5,
-          end: "+=350%",
-        },
-      })
-      .to(airpodsRef.current, {
-        frame: frameCount - 1,
-        snap: "frame",
-        ease: "none",
-        duration: 1,
-      });
+    const xOffset = (canvasWidth - frameWidth) / 2;
+    const yOffset = (canvasHeight - frameHeight) / 2;
 
-    imagesRef.current[0].onload = render;
+    context.clearRect(0, 0, canvasWidth, canvasHeight);
+    context.drawImage(frame, xOffset, yOffset, frameWidth, frameHeight);
+  }
 
-    // function render() {
-    //   context.clearRect(0, 0, canvas.width, canvas.height);
-    //   context.drawImage(
-    //     imagesRef.current[airpodsRef.current.frame],
-    //     0,
-    //     0,
-    //     canvas.width,
-    //     canvas.height
-    //   );
-    // }
+  gsap.registerPlugin(ScrollTrigger);
 
-    function render() {
-      const frame = imagesRef.current[airpodsRef.current.frame];
-      const canvasWidth = canvasRef.current.width;
-      const canvasHeight = canvasRef.current.height;
+  gsap
+    .timeline({
+      onUpdate: render,
+      scrollTrigger: {
+        trigger: section,
+        pin: true,
+        scrub: 1.5,
+        end: "+=100%",
+      },
+    })
+    .to(airpodsRef.current, {
+      frame: frameCount - 1,
+      snap: "frame",
+      ease: "none",
+      duration: 1,
+    });
 
-      const frameWidth = 450; // Original width of your frames
-      const frameHeight = (frame.height * frameWidth) / frame.width; // Maintain aspect ratio
+  return () => {
+    ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    window.removeEventListener("resize", setCanvasSize);
+  };
+}, []);
 
-      const xOffset = (canvasWidth - frameWidth) / 2;
-      const yOffset = (canvasHeight - frameHeight) / 2;
-
-      context.clearRect(0, 0, canvasWidth, canvasHeight);
-      context.drawImage(frame, xOffset, yOffset, frameWidth, frameHeight);
-    }
-
-    // Cleanup
-    return () => {
-      // window.removeEventListener("resize", setCanvasSize);
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-    };
-  }, []);
 
   // console.log(loading ? "USP Loading" : "USP Complate");
   // console.log(loadUSP(loading));
@@ -202,6 +179,23 @@ const Home = ({ loadUSP }) => {
                 </p>
               </div>
             </div>
+
+            <div className={styles.section}>
+              {/* <div className={styles.bead}></div> */}
+              <div className={`${styles.contentX} triggered-element`}>
+                {/* <p className={styles.timeline_number}>03</p> */}
+                <h2 className={styles.twoo}>Architecture</h2>
+                <p className={styles.contentInner}>Shaping Iconic Skylines</p>
+                <p className={styles.timeline_sec_comment}>
+                  We collaborate with visionary architects and builders to bring
+                  modern structures to life. Our customizable aluminium profiles
+                  enable sleek facades, striking interiors, and enduring
+                  exteriors, blending form and function for landmark buildings
+                  that redefine the spaces they occupy.
+                </p>
+              </div>
+            </div>
+            
             <div className={styles.section}>
               {/* <div className={styles.bead}></div> */}
               <div className={`${styles.contentX} triggered-element`}>
@@ -219,21 +213,7 @@ const Home = ({ loadUSP }) => {
                 </p>
               </div>
             </div>
-            <div className={styles.section}>
-              {/* <div className={styles.bead}></div> */}
-              <div className={`${styles.contentX} triggered-element`}>
-                {/* <p className={styles.timeline_number}>03</p> */}
-                <h2 className={styles.twoo}>Architecture</h2>
-                <p className={styles.contentInner}>Shaping Iconic Skylines</p>
-                <p className={styles.timeline_sec_comment}>
-                  We collaborate with visionary architects and builders to bring
-                  modern structures to life. Our customizable aluminium profiles
-                  enable sleek facades, striking interiors, and enduring
-                  exteriors, blending form and function for landmark buildings
-                  that redefine the spaces they occupy.
-                </p>
-              </div>
-            </div>
+            
             <div className={styles.section}>
               {/* <div className={styles.bead}></div> */}
               <div className={`${styles.contentX} triggered-element`}>
