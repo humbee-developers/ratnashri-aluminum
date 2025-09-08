@@ -120,21 +120,44 @@ const Home = ({ loadUSP }) => {
     createAnimation();
   }, []);
 
+  // const createAnimation = () => {
+  //   gsap.to(".triggered-element", {
+  //     scrollTrigger: {
+  //       trigger: container.current,
+  //       scrub: 1,
+  //       start: "top 80%",
+  //       end: "bottom 40%",
+  //       markers: "true",
+  //     },
+  //     opacity: 1,
+  //     color: "#000",
+  //     ease: "none",
+  //     stagger: 0.9,
+  //   });
+  // };
+
   const createAnimation = () => {
-    gsap.to(".triggered-element", {
-      scrollTrigger: {
-        trigger: container.current,
-        scrub: 1,
-        start: "top 50%",
-        end: "bottom 40%",
-        // markers: "true",
-      },
-      opacity: 1,
-      color: "#000",
-      ease: "none",
-      stagger: 0.9,
-    });
-  };
+  ScrollTrigger.batch(".triggered-element", {
+    start: "top 80%",
+    end: "bottom top",
+    onEnter: (batch) =>
+      gsap.to(batch, {
+        opacity: 1,
+        color: "#000",
+        stagger: 0.3,
+        ease: "power2.out",
+        duration: 1,
+      }),
+    onLeaveBack: (batch) =>
+      gsap.to(batch, {
+        opacity: 0,
+        color: "#999",
+        stagger: 0.1,
+        ease: "power2.inOut",
+        duration: 0.5,
+      }),
+  });
+};
 
   return (
     <div className={styles.display1}>
