@@ -36,25 +36,25 @@ const Footer = () => {
                 <Link href="/">Home</Link>
               </div>
               <div className="f3">
-                <Link href="/">About Us</Link>
+                <Link href="https://ratnashri.co.in/about-us/">About Us</Link>
               </div>
               <div className="f3">
-                <Link href="/">Products</Link>
+                <Link href="https://ratnashri.co.in/products/">Products</Link>
               </div>
               <div className="f3">
-                <Link href="/">Segments</Link>
+                <Link href="https://ratnashri.co.in/segments/">Segments</Link>
               </div>
               <div className="f3">
-                <Link href="/">Technical Specification</Link>
+                <Link href="https://ratnashri.co.in/technical-specification/">Technical Specification</Link>
               </div>
               <div className="f3">
-                <Link href="/">Quality Assurance</Link>
+                <Link href="https://ratnashri.co.in/quality-assurance/">Quality Assurance</Link>
               </div>
-              <div className="f3">
+              {/* <div className="f3">
                 <Link href="/">Blogs</Link>
-              </div>
+              </div> */}
               <div className="f3">
-                <Link href="/">Contact Us</Link>
+                <Link href="https://ratnashri.co.in/contact-us/">Contact Us</Link>
               </div>
             </div>
             {/* 2 sections */}

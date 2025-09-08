@@ -14,20 +14,20 @@ const navItems = [
   },
   {
     title: "About Us",
-    href: "/",
+    href: "https://ratnashri.co.in/about-us/",
   },
 
   {
     title: "Products",
-    href: "/",
+    href: "https://ratnashri.co.in/products/",
   },
   {
-    title: "Blogs",
-    href: "/",
+    title: "Segments",
+    href: "https://ratnashri.co.in/segments/",
   },
   {
     title: "Contact Us",
-    href: "/",
+    href: "https://ratnashri.co.in/contact-us/",
   }
 ]
 
