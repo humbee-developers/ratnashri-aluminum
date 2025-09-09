@@ -1,8 +1,9 @@
 .containerOne {
   position: relative;
-  width: 100%;
-  max-width: 1200px;
-  margin: auto;
+  /* width: 100%;
+  max-width: 1200px; */
+
+  margin: 0 90px;
   cursor: pointer;
 }
 
@@ -33,12 +34,14 @@
 }
 @media(max-width: 1199px){
  .containerOne{
-        max-width: 900px;
+        /* max-width: 900px; */
+        margin: 0 90px;
     }
 }
 @media(max-width: 991px){
  .containerOne{
-        max-width: 600px;
+  margin: 0 80px;
+        /* max-width: 600px; */
     }
 }
 @media(max-width: 575px){
@@ -46,5 +49,15 @@
         font-size: 1.5rem;
          padding: 15px 25px;
     }
+     .containerOne{
+  margin: 0 50px;
+        /* max-width: 600px; */
+    }
    
+}
+@media(max-width: 475px){
+   .containerOne{
+  margin: 0 30px;
+        /* max-width: 600px; */
+    }
 }

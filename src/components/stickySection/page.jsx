@@ -62,7 +62,7 @@ const CarouselSection = () => {
   });
 
   slides.forEach((slide, i) => {
-    if (i === 0) {
+    if (i === 0) {  
       gsap.set(slide, { yPercent: 0, opacity: 1, scale: 1 });
       tl.add(`our-work-${i + 1}`, "+=0");
     } else {

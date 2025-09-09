@@ -8,7 +8,7 @@ import Factory from "@/components/factory/page"
 import Timeline from "@/components/timeline/page";
 import Timeline1 from "@/components/timeline/page2";
 import DifferenceSection from "@/components/differenceSection/differenceSection";
-import PrecisionSection from "@/components/precisionSection/precisionSection";
+import PrecisionSection from "@/components/precisionSectionNew/precisionSection";
 import StickySection from "@/components/stickySection/page"
 import BrochureForm from "@/components/brochure/brochureForm";
 import Form1 from "@/components/form1/Form";

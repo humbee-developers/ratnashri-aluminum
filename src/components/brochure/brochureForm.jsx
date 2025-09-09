@@ -1,49 +1,105 @@
 import "./brochureForm.scss";
-import styled from 'styled-components';
+import styled from "styled-components";
 import { motion } from "framer-motion";
-import YellowSubmitButtonForm from "../../components/yellowSubmitButtonForm/YellowSubmitButtonForm";
+import { useState } from "react";
+import toast, { Toaster } from "react-hot-toast";
 
 function BrochureForm() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const handleDownload = async () => {
+    if (!name || !email) {
+      toast.error("Please fill in both name and email.");
+      return;
+    }
+
+    setLoading(true);
+
+    try {
+      const res = await fetch("/api/sendToSheet", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ name, email }),
+      });
+
+      const responseData = await res.json();
+      console.log("🟢 Response from Google Apps Script:", responseData);
+
+      if (res.ok && responseData.status === "ok") {
+        toast.success("Downloaded successful! 🎉"); 
+
+        // PDF download
+        const link = document.createElement("a");
+        link.href = "/brochure.pdf";
+        link.download = "Ratnashri-Brochure.pdf";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+
+        // Clear form fields
+        setName("");
+        setEmail("");
+      } else {
+        toast.error("Submission failed. Please try again.");
+      }
+    } catch (error) {
+      console.error("🔴 Submission failed:", error);
+      toast.error("Something went wrong. Please try again.");
+    }
+
+    setLoading(false);
+  };
+
   return (
     <div className="BrochureMain">
+      <Toaster position="top-right" reverseOrder={false} />
       <div className="BrochureInner">
         <div className="BrochureInnerContent">
-          <motion.p initial={{
-            opacity: 0,
-            y: 80,
-          }}
-            whileInView={{
-              opacity: 1,
-              y: 0,
-              transition: {
-                duration: 2,
-              },
-            }}
+          <motion.p
+            initial={{ opacity: 0, y: 80 }}
+            whileInView={{ opacity: 1, y: 0, transition: { duration: 2 } }}
             viewport={{ once: true }}
-          >Download Brochure</motion.p>
+          >
+            Download Brochure
+          </motion.p>
         </div>
+
         <div className="BrochureInput">
           <StyledWrapper>
             <div className="coolinput">
-              <label className="text" htmlFor="input">Name*</label>
-              <input className="input" name="input" type="text" />
+              <label className="text" htmlFor="name">Name*</label>
+              <input
+                className="input"
+                name="name"
+                type="text"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              />
             </div>
           </StyledWrapper>
+
           <StyledWrapper>
             <div className="coolinput">
-              <label className="text" htmlFor="input">Email*</label>
-              <input className="input" name="input" type="email" />
+              <label className="text" htmlFor="email">Email*</label>
+              <input
+                className="input"
+                name="email"
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
             </div>
           </StyledWrapper>
-          {/* <div className="submit-button">
-            <YellowSubmitButtonForm
-              btn_text={"Download"}
-              type="submit"
-            />
-          </div> */}
+
           <div>
-            <button className="button">
-              <span className="button-content">Download </span>
+            <button className="button" onClick={handleDownload} disabled={loading}>
+              <span className="button-content">
+                {loading ? "Downloading..." : "Download"}
+              </span>
             </button>
           </div>
         </div>
@@ -51,6 +107,7 @@ function BrochureForm() {
     </div>
   );
 }
+
 const StyledWrapper = styled.div`
   .coolinput {
     display: flex;
@@ -58,39 +115,29 @@ const StyledWrapper = styled.div`
     width: fit-content;
     position: static;
     max-width: 340px;
+    margin-bottom: 15px;
   }
 
   .coolinput label.text {
     font-size: 0.75rem;
     color: #000000;
     font-weight: 700;
-    position: relative;
-    top: 0.5rem;
-    margin: 0 0 0 7px;
+    margin: 0 0 5px 7px;
     padding: 0 3px;
     width: fit-content;
   }
 
-  .coolinput input[type="text"].input {
+  .coolinput input.input {
     padding: 11px 25px 11px 10px;
     font-size: 15px;
-    border: 1px #619DEA38 solid;
+    border: 1px #619dea38 solid;
     border-radius: 5px;
-    background: #619DEA17;
+    background: #619dea17;
   }
 
-  .coolinput input[type="text"].input:focus {
+  .coolinput input.input:focus {
     outline: none;
   }
-   .coolinput input[type="email"].input {
-   padding: 11px 25px 11px 10px;
-    font-size: 15px;
-    border: 1px #619DEA38 solid;
-    border-radius: 5px;
-    background: #619DEA17;
-  }
+`;
 
-  .coolinput input[type="email"].input:focus {
-    outline: none;
-  }`;
 export default BrochureForm;
