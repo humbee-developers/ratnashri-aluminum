@@ -1,10 +1,7 @@
 import "./differenceSection.scss";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import image1 from "../../images/sec1.png";
-import image2 from "../../images/sec2.png";
-import image3 from "../../images/sec3.png";
-import image4 from "../../images/sec4.png";
+import bgImage from "../../images/sec1.png"; // Use your desired background image
 
 function DifferenceSection() {
   return (
@@ -31,24 +28,103 @@ function DifferenceSection() {
           <p>Trusted by Visionaries. Proven by Performance.</p>
         </div>
       </div>
-      {/*  */}
+
+      {/* UPDATED SECTION */}
       <div className="ImageSectionMain">
-        <div className="ImageSectionInner">
-          <div className="ImageSectionImg">
-            <Image src={image1} alt="none" />
+        <div className="ImageSectionInner withBg">
+          <div className="ImageSectionBox">
+            <div className="centeredText">
+              <motion.div
+                initial={{
+                  opacity: 0,
+                  scale: 0.5,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  scale: 1,
+                  transition: {
+                    duration: 1.2,
+                    ease: "easeOut",
+                  },
+                }}
+                viewport={{ once: true }}
+              >
+                <h2>10+</h2>
+                <p>Years of Experience</p>
+              </motion.div>
+            </div>
           </div>
-          <div className="ImageSectionImg">
-            <Image src={image2} alt="none" />
+          <div className="ImageSectionBox">
+            <div className="centeredText">
+              <motion.div
+                initial={{
+                  opacity: 0,
+                  scale: 0.5,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  scale: 1,
+                  transition: {
+                    duration: 1.2,
+                    ease: "easeOut",
+                  },
+                }}
+                viewport={{ once: true }}
+              >
+                <h2>$20+</h2>
+                <p>Million Turnover</p>
+              </motion.div>
+            </div>
           </div>
-          <div className="ImageSectionImg">
-            <Image src={image3} alt="none" />
+          <div className="ImageSectionBox">
+            <div className="centeredText">
+              <motion.div
+                initial={{
+                  opacity: 0,
+                  scale: 0.5,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  scale: 1,
+                  transition: {
+                    duration: 1.2,
+                    ease: "easeOut",
+                  },
+                }}
+                viewport={{ once: true }}
+              >
+                <h2>500+</h2>
+                <p>Happy Customers</p>
+              </motion.div>
+            </div>
           </div>
-          <div className="ImageSectionImg">
-            <Image src={image4} alt="none" />
+          <div className="ImageSectionBox">
+            <div className="centeredText">
+              <motion.div
+                initial={{
+                  opacity: 0,
+                  scale: 0.5,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  scale: 1,
+                  transition: {
+                    duration: 1.2,
+                    ease: "easeOut",
+                  },
+                }}
+                viewport={{ once: true }}
+              >
+                <h2>10+</h2>
+                <p>Quality Checkpoints</p>
+              </motion.div>
+            </div>
           </div>
         </div>
       </div>
-      {/*  */}
+
+      {/* END UPDATED SECTION */}
+
       <div>
         <div className="ContentInnerDiff">
           <p>
@@ -64,4 +140,5 @@ function DifferenceSection() {
     </div>
   );
 }
+
 export default DifferenceSection;
