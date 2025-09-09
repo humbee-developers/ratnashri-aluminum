@@ -8,7 +8,7 @@ import youtube from "../../images/youtube.svg";
 
 import whatsapp from "../../images/whatsapp.svg";
 import linkedin from "../../images/linkedin.svg";
-import Logo1 from "../../images/Logo1.png";
+import Logo1 from "../../images/LogoBannerTwo.png";
 import Link from "next/link";
 // import { Link, useLocation } from "react-router-dom";
 // import Form from "../form/Form";
