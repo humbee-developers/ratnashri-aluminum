@@ -62,9 +62,7 @@ function PrecisionSection() {
             }}
             viewport={{ once: true }}
              className="PrecisionContentInnerDiff">
-          <p
-            
-          >
+          <p>
             At Ratnashri, our in-house die production delivers unmatched
             precision and speed. Using cutting-edge technology and advanced
             simulation software like QexDD and Qform, we craft custom and
