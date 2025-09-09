@@ -126,7 +126,20 @@ function DifferenceSection() {
       {/* END UPDATED SECTION */}
 
       <div>
-        <div className="ContentInnerDiff">
+        <motion.div 
+        initial={{
+              opacity: 0,
+              y: 80,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                duration: 2,
+              },
+            }}
+            viewport={{ once: true }}
+            className="ContentInnerDiff">
           <p>
             Ratnashri Aluminium, an ISO 9001 and 14001 certified leader,
             specializes in precision aluminium extrusions for the boldest
@@ -135,7 +148,7 @@ function DifferenceSection() {
             demanding industries through quality, scale, and relentless
             innovation.
           </p>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
