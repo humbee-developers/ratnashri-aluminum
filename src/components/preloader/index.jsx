@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { opacity, slideUp } from "./anime";
 import Image from "next/image";
-import logo from "@/images/Logo1.png";
+import logo from "@/images/LogoBanner.svg";
 import styles from "@/components/preloader/style.module.css";
 
 export default function Preloader({ counter }) {
