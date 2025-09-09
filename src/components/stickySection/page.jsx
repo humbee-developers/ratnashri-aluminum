@@ -26,7 +26,7 @@ const steps = [
   },
   {
     step: "4",
-    title: "Tomorrow’s growth",
+    title: "Growth",
     // texts: ["Sign the contract and send the payment."]
   },
   // {
