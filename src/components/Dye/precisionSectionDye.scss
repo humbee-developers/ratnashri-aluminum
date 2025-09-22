@@ -1,13 +1,14 @@
 
 .PrecisionSec {
-  overflow: hidden;
-  padding: 150px 50px 60px 50px;
+  // overflow: hidden;
+  // padding: 150px 50px 60px 50px;
 
-  @media (max-width: 575px) {
-    padding: 50px 30px;
-  }
+  // @media (max-width: 575px) {
+  //   padding: 50px 30px;
+  // }
 
   .PrecisionSecHeading {
+    padding: 0 50px;
     .PrecisionHeadingSec {
       p {
         font-size: 50px;
@@ -158,6 +159,7 @@
   .PrecisionContentInnerDiff {
     // padding-top: 2rem;
     margin-top: -90px;
+    padding: 0 50px;
 
     p {
       letter-spacing: 0.3px;
@@ -165,6 +167,7 @@
       font-style: normal;
       font-weight: 200;
       line-height: 30px;
+      // width: 90%;
       @media (min-width: 1600px) {
         font-size: 20px;
       }

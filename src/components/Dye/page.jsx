@@ -4,7 +4,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { motion } from "framer-motion";
 import styles from "@/components/Dye/dye.module.css";
-import "./precisionSection.scss"
+import "./precisionSectionDye.scss"
 gsap.registerPlugin(ScrollTrigger);
 
 const AirpodsAnimation = ({ loadImage }) => {
@@ -256,7 +256,7 @@ const setCanvasSize = () => {
   };
 
   return (
-    <section>
+    <section  className={styles.fixed_bg_wrapper}>
       <section ref={sectionRef}>
         <div className="PrecisionSecHeading">
         <motion.div

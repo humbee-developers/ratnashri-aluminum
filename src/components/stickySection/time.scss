@@ -8,6 +8,16 @@
     grid-template-columns: 1fr;
   }
 }
+.WorkSectionMain{
+   background-image: url("../../images/demo_home.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  padding-top: 150px;
+  width: 100%;
+  overflow: hidden;
+}
 .TextGrid{
   margin-top: -100px;
   p{

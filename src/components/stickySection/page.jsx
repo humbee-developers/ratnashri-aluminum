@@ -116,7 +116,8 @@ const CarouselSection = () => {
   // };
 
  return (
-  <section id="work" className="work-section" ref={containerRef}>
+<div className="WorkSectionMain">
+    <section id="work" className="work-section" ref={containerRef}>
     <div className="work-grid">
       <div className="work-left">
         <h2 className="blurred-box__title fixed-title">
@@ -147,6 +148,7 @@ const CarouselSection = () => {
       <p>“Specialists in Precision Aluminium Extrusions” With decades of combined experience, our in-house engineers, die designers, and metallurgists ensure every profile is shaped with accuracy and durability. From custom tooling to complex cross-sections, we deliver solutions where precision matters most.</p>
       </div>
   </section>
+</div>
 );
 
 };
