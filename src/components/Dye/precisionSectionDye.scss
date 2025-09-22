@@ -160,6 +160,9 @@
     // padding-top: 2rem;
     margin-top: -90px;
     padding: 0 50px;
+    @media(max-width: 575px){
+      padding: 0 20px;
+    }
 
     p {
       letter-spacing: 0.3px;
