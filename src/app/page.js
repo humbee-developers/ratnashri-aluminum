@@ -60,7 +60,6 @@ export default function Home() {
         <DifferenceSection />
         <Timeline />
         <Timeline1 />
-        
         <PrecisionSection />
         <StickySection />
         <BrochureForm />

@@ -126,8 +126,8 @@ const Form1 = () => {
             className="form_header">GET A QUOTE</motion.div>
         </div>
         <form onSubmit={handleSubmit}>
-          {/* <div data-tf-live="01K4MFSRXZB5GD75V7BB353YXC"></div><script src="//embed.typeform.com/next/embed.js"></script> */}
-          <div className="form_field_flex">
+          <div data-tf-live="01K4MFSRXZB5GD75V7BB353YXC"></div><script src="//embed.typeform.com/next/embed.js"></script>
+          {/* <div className="form_field_flex">
             <div className="form_content">
               <div className="input-container">
                 <input
@@ -246,7 +246,7 @@ const Form1 = () => {
               transition={Slide}
               className={"contactFormNotification"}
             />
-          </div>
+          </div> */}
         </form>
       </div>
     </div>
