@@ -9,7 +9,7 @@ import DyeFrames from "@/components/Dye/page"
 function PrecisionSection() {
   return (
     <div className="PrecisionSec">
-      <div className="PrecisionSecHeading">
+      {/* <div className="PrecisionSecHeading">
         <motion.div
           initial={{
             opacity: 0,
@@ -28,7 +28,7 @@ function PrecisionSection() {
           <p style={{ display: "block" }}>Precision Dies.</p>
           <p style={{ display: "inline-block" }}>Seamless Extrusions.</p>
         </motion.div>
-      </div>
+      </div> */}
       {/*  */}
       {/* <div className="ImageSectionMain">
         <div className="ImageSectionInner withBg">
@@ -128,7 +128,7 @@ function PrecisionSection() {
         {/* <div className="PrecisionHeadingSecImage">
           <Image src={image1} alt="none" className="PrecisionHeadingSecImg"/>
         </div> */}
-        <motion.div
+        {/* <motion.div
         initial={{
               opacity: 0,
               y: 80,
@@ -153,7 +153,7 @@ function PrecisionSection() {
             and timely delivery, empowering you with reliable extrusion
             solutions designed to elevate your business performance.
           </p>
-        </motion.div>
+        </motion.div> */}
       </div>
     </div>
   );

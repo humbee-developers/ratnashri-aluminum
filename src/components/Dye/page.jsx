@@ -2,7 +2,9 @@
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import { motion } from "framer-motion";
 import styles from "@/components/Dye/dye.module.css";
+import "./precisionSection.scss"
 gsap.registerPlugin(ScrollTrigger);
 
 const AirpodsAnimation = ({ loadImage }) => {
@@ -67,24 +69,45 @@ const AirpodsAnimation = ({ loadImage }) => {
     //   ScrollTrigger.update();
     // };
 
-    const setCanvasSize = () => {
-      const originalWidth = 1632;
-      const originalHeight = 918;
-      const aspectRatio = originalWidth / originalHeight;
-      const availableWidth = window.innerWidth;
+    // const setCanvasSize = () => {
+    //   const originalWidth = 1632;
+    //   const originalHeight = 918;
+    //   const aspectRatio = originalWidth / originalHeight;
+    //   const availableWidth = window.innerWidth;
 
-      if (availableWidth < 200) {
-        canvas.width = originalWidth / 2;
-        canvas.height = originalHeight / 2;
-        canvas.style.width = "1301px";
-        canvas.style.height = "100vh";
-      } else {
-        canvas.width = originalWidth;
-        canvas.height = originalHeight;
-        canvas.style.width = "100%";
-        canvas.style.height = "100vh";
-      }
-    };
+    //   if (availableWidth < 200) {
+    //     canvas.width = originalWidth / 2;
+    //     canvas.height = originalHeight / 2;
+    //     canvas.style.width = "1301px";
+    //     canvas.style.height = "80vh";
+    //   } else {
+    //     canvas.width = originalWidth;
+    //     canvas.height = originalHeight;
+    //     canvas.style.width = "100%";
+    //     canvas.style.height = "80vh";
+    //   }
+    // };
+const setCanvasSize = () => {
+  const originalWidth = 1632;
+  const originalHeight = 918;
+  const aspectRatio = originalWidth / originalHeight;
+  const availableWidth = window.innerWidth;
+
+  canvas.width = originalWidth;
+  canvas.height = originalHeight;
+
+  if (availableWidth < 475) {
+    canvas.style.height = "40vh";
+  } else if (availableWidth < 575) {
+    canvas.style.height = "50vh";
+  } else if (availableWidth < 770) {
+    canvas.style.height = "65vh";
+  } else {
+    canvas.style.height = "80vh";
+  }
+
+  canvas.style.width = "100%";
+};
 
     setCanvasSize();
     window.addEventListener("resize", setCanvasSize);
@@ -235,10 +258,56 @@ const AirpodsAnimation = ({ loadImage }) => {
   return (
     <section>
       <section ref={sectionRef}>
+        <div className="PrecisionSecHeading">
+        <motion.div
+          initial={{
+            opacity: 0,
+            y: 80,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: {
+              duration: 2,
+            },
+          }}
+          viewport={{ once: true }}
+          className="PrecisionHeadingSec"
+        >
+          <p style={{ display: "block" }}>Precision Dies.</p>
+          <p style={{ display: "inline-block" }}>Seamless Extrusions.</p>
+        </motion.div>
+      </div>
         <canvas
           className={styles.canvas_factory_settings}
           ref={canvasRef}
         ></canvas>
+         <motion.div
+        initial={{
+              opacity: 0,
+              y: 80,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                duration: 2,
+              },
+            }}
+            viewport={{ once: true }}
+             className="PrecisionContentInnerDiff">
+          <p
+            
+          >
+            At Ratnashri, our in-house die production delivers unmatched
+            precision and speed. Using cutting-edge technology and advanced
+            simulation software like QexDD and Qform, we craft custom and
+            standard dies that perfectly align with your project needs. This
+            streamlined process ensures enhanced efficiency, superior quality,
+            and timely delivery, empowering you with reliable extrusion
+            solutions designed to elevate your business performance.
+          </p>
+        </motion.div>
       </section>
       {/* <div className={styles.scroll_text_wrapper}>
         <div ref={container} className={styles.main}>
