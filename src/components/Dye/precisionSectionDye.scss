@@ -9,6 +9,9 @@
 
   .PrecisionSecHeading {
     padding: 0 50px;
+    @media(max-width: 575px){
+      padding: 0 20px;
+    }
     .PrecisionHeadingSec {
       p {
         font-size: 50px;
