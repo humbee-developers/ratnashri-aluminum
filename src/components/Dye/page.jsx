@@ -97,7 +97,7 @@ const setCanvasSize = () => {
   canvas.height = originalHeight;
 
   if (availableWidth < 475) {
-    canvas.style.height = "40vh";
+    canvas.style.height = "35vh";
   } else if (availableWidth < 575) {
     canvas.style.height = "50vh";
   } else if (availableWidth < 770) {
