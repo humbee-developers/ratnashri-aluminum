@@ -1,7 +1,7 @@
 import "./precisionSection.scss";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import image1 from "../../images/sec1.png";
+import image1 from "../../images/prec_1.png";
 import image2 from "../../images/sec2.png";
 import image3 from "../../images/sec3.png";
 import image4 from "../../images/sec4.png";
@@ -30,7 +30,7 @@ function PrecisionSection() {
         </motion.div>
       </div>
       {/*  */}
-      <div className="ImageSectionMain">
+      {/* <div className="ImageSectionMain">
         <div className="ImageSectionInner withBg">
           <div className="ImageSectionBox">
             <div className="centeredText">
@@ -121,9 +121,12 @@ function PrecisionSection() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       {/*  */}
       <div>
+        <div className="PrecisionHeadingSecImage">
+          <Image src={image1} alt="none" className="PrecisionHeadingSecImg"/>
+        </div>
         <motion.div
         initial={{
               opacity: 0,
