@@ -143,6 +143,9 @@ const CarouselSection = () => {
         </div>
       </div>
     </div>
+    <div className="TextGrid">
+      <p>“Specialists in Precision Aluminium Extrusions” With decades of combined experience, our in-house engineers, die designers, and metallurgists ensure every profile is shaped with accuracy and durability. From custom tooling to complex cross-sections, we deliver solutions where precision matters most.</p>
+      </div>
   </section>
 );
 
