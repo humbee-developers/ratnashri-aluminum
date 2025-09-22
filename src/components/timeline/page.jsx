@@ -43,9 +43,9 @@ const Home = ({ loadUSP }) => {
   setCanvasSize();
   window.addEventListener("resize", setCanvasSize);
 
-  const frameCount = 215;
+  const frameCount = 314;
   const currentFrame = (index) =>
-    `/timeline_frames/${(index + 1).toString().padStart(3, "0")}.png`;
+    `/Timeline_Frames_new/${(index + 1).toString().padStart(3, "0")}.png`;
 
   imagesRef.current = []; // Clear in case re-renders
 
@@ -93,7 +93,8 @@ const Home = ({ loadUSP }) => {
         trigger: section,
         pin: true,
         scrub: 1.5,
-        end: "+=100%",
+        start: "-=10%",
+        end: "+=110%",
       },
     })
     .to(airpodsRef.current, {
