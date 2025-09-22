@@ -5,7 +5,7 @@ import image1 from "../../images/prec_1.png";
 import image2 from "../../images/sec2.png";
 import image3 from "../../images/sec3.png";
 import image4 from "../../images/sec4.png";
-
+import DyeFrames from "@/components/Dye/page"
 function PrecisionSection() {
   return (
     <div className="PrecisionSec">
@@ -124,9 +124,10 @@ function PrecisionSection() {
       </div> */}
       {/*  */}
       <div>
-        <div className="PrecisionHeadingSecImage">
+        <DyeFrames />
+        {/* <div className="PrecisionHeadingSecImage">
           <Image src={image1} alt="none" className="PrecisionHeadingSecImg"/>
-        </div>
+        </div> */}
         <motion.div
         initial={{
               opacity: 0,
