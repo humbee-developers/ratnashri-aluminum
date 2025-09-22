@@ -4,7 +4,16 @@
   object-fit: cover;
   object-position: center;
 }
-
+.fixed_bg_wrapper_factory{
+  background-image: url("../../images/demo_aluminium.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  /* padding-top: 150px; */
+  width: 100%;
+  overflow: hidden;
+}
 
 .main {
   display: flex;

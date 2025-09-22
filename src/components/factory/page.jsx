@@ -233,7 +233,7 @@ const AirpodsAnimation = ({ loadImage }) => {
   };
 
   return (
-    <section>
+    <section className={styles.fixed_bg_wrapper_factory}>
       <section ref={sectionRef}>
         <canvas
           className={styles.canvas_factory_settings}
