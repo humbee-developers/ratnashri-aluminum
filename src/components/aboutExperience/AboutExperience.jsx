@@ -24,7 +24,7 @@ function AboutExperience() {
               viewport={{ once: true }}
               className="heading"
             >
-              One Aluminium. Endless Possibilities
+              One Metal. Endless Possibilities
             </motion.div>
             <div className="content">
               {

@@ -103,7 +103,7 @@ const setCanvasSize = () => {
   } else if (availableWidth < 770) {
     canvas.style.height = "65vh";
   } else {
-    canvas.style.height = "80vh";
+    canvas.style.height = "70vh";
   }
 
   canvas.style.width = "100%";
@@ -112,7 +112,7 @@ const setCanvasSize = () => {
     setCanvasSize();
     window.addEventListener("resize", setCanvasSize);
 
-    const frameCount = 200;
+    const frameCount = 134;
     // const prefix = process.env.NODE_ENV === "production" ? "/ratnashri-aluminum" : "";
     const currentFrame = (index) =>
       // `${prefix}/Machine_Frames/${(
