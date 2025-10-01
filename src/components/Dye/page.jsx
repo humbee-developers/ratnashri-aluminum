@@ -112,11 +112,11 @@ const setCanvasSize = () => {
     setCanvasSize();
     window.addEventListener("resize", setCanvasSize);
 
-    const frameCount = 199;
+    const frameCount = 200;
     // const prefix = process.env.NODE_ENV === "production" ? "/ratnashri-aluminum" : "";
     const currentFrame = (index) =>
       // `${prefix}/Machine_Frames/${(
-      `/Dye_Frames/${(index + 0).toString().padStart(3, "0")}.png`;
+      `/Dye_Frames/${(index + 0).toString().padStart(4, "0")}.png`;
     // https://plywoodassets.royaletouche.com/assets/newframes/factoryzoom/F000.webp
     // https://plywoodassets.royaletouche.com/assets/compressed/factoryzoom/F000.jpg
     let imgL = [];
