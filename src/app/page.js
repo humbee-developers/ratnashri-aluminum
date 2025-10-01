@@ -38,6 +38,7 @@ export default function Home() {
   useEffect(() => {
      console.log("Frame Load Status:", framesLoaded); // ✅ Debug frame status
     if (framesLoaded.factory && framesLoaded.precision) {
+       console.log("✅ All frames loaded. Hiding preloader...");
       setIsLoading(false);
     }
   }, [framesLoaded]);
