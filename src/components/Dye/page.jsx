@@ -155,6 +155,11 @@ const setCanvasSize = () => {
 
         await Promise.all(loadImagePromises);
         setLoading(false);
+        console.log("✅ Factory frames loaded successfullyy");
+        // ✅ Notify parent (Home) that loading is complete
+        if (typeof onFramesLoaded === "function") {
+          onFramesLoaded();
+        }
       } catch (error) {
         console.error("Error loading images:", error);
         // Handle error loading images

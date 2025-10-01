@@ -18,28 +18,53 @@ import VideoPlayer from "@/components/videoPlayer/videoplayer";
 
 export default function Home() {
   const [width, setWidth] = useState(null);
-   const [isLoading, setIsLoading] = useState(true);
-   const [isCounter, setCounter] = useState(0);
-    useEffect(() => {
+  const [isLoading, setIsLoading] = useState(true);
+  const [isCounter, setCounter] = useState(0);
+
+  const [framesLoaded, setFramesLoaded] = useState({
+    factory: false,
+    precision: false,
+  });
+
+  useEffect(() => {
     const handleResize = () => {
       setWidth(window.innerWidth);
     };
-
-    handleResize(); // Initialize width
+    handleResize();
     window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
-  // Timer to hide the preloader after 5 seconds
+
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false); // Set to false after 5 seconds
-    }, 8000); // 5000ms = 5 seconds
+     console.log("Frame Load Status:", framesLoaded); // ✅ Debug frame status
+    if (framesLoaded.factory && framesLoaded.precision) {
+      setIsLoading(false);
+    }
+  }, [framesLoaded]);
 
-    return () => clearTimeout(timer); // Clear the timer on cleanup
-  }, []);
+  useEffect(() => {
+    if (!isLoading) return;
+    const interval = setInterval(() => {
+      setCounter((prev) => {
+        if (prev >= 100) {
+          clearInterval(interval);
+          return 100;
+        }
+        return prev + 1;
+      });
+    }, 50);
+    return () => clearInterval(interval);
+  }, [isLoading]);
+  // Timer to hide the preloader after 5 seconds
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setIsLoading(false); // Set to false after 5 seconds
+  //   }, 8000); // 5000ms = 5 seconds
+
+  //   return () => clearTimeout(timer); // Clear the timer on cleanup
+  // }, []);
+
+
 
   return (
     <>
@@ -52,10 +77,17 @@ export default function Home() {
           />
         }
       </AnimatePresence>
+      {!isLoading && (
       <main className="main">
         <FirstSection />
         <VideoPlayer />
-        <Factory />
+        {/* <Factory /> */}
+        <Factory
+          onFramesLoaded={() =>
+            setFramesLoaded((prev) => ({ ...prev, factory: true }))
+          }
+        />
+
         <AboutExperience />
         <DifferenceSection />
         <Timeline />
@@ -65,6 +97,7 @@ export default function Home() {
         <BrochureForm />
         <Form1 />
       </main>
+      )}
     </>
   );
 }
