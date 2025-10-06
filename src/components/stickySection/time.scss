@@ -9,11 +9,12 @@
   }
 }
 .WorkSectionMain{
-   background-image: url("../../images/demo_home.png");
+   background-image: url("../../images/demo_aluminium.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center center;
+   will-change: background-position; // for performance
   // padding-top: 150px;
   width: 100%;
   overflow: hidden;
