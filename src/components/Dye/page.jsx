@@ -95,16 +95,39 @@ const setCanvasSize = () => {
 
   canvas.width = originalWidth;
   canvas.height = originalHeight;
-
-  if (availableWidth < 475) {
+  // Apply height conditions based on screen width
+  if (availableWidth < 345) {
+    canvas.style.height = "25vh";
+  } else if (availableWidth < 375) {
+    canvas.style.height = "30vh";
+  } 
+  else if (availableWidth < 475) {
     canvas.style.height = "35vh";
-  } else if (availableWidth < 575) {
-    canvas.style.height = "50vh";
-  } else if (availableWidth < 770) {
+  } 
+  else if (availableWidth < 675) {
+    canvas.style.height = "45vh";
+  } else if (availableWidth < 768) {
     canvas.style.height = "65vh";
+  } else if (availableWidth < 1200) {
+    canvas.style.height = "75vh";
+  } else if (availableWidth < 1500) {
+    canvas.style.height = "80vh";
   } else {
-    canvas.style.height = "70vh";
+    canvas.style.height = "85vh";
   }
+
+  // if (availableWidth < 475) {
+  //   canvas.style.height = "35vh";
+  // } else if (availableWidth < 575) {
+  //   canvas.style.height = "50vh";
+  // } else if (availableWidth < 770) {
+  //   canvas.style.height = "65vh";
+  // }
+  //   else if (availableWidth < 1900) {
+  //   canvas.style.height = "85vh";
+  // } else {
+  //   canvas.style.height = "80vh";
+  // }
 
   canvas.style.width = "100%";
 };
