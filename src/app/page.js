@@ -13,7 +13,7 @@ import StickySection from "@/components/stickySection/page"
 import BrochureForm from "@/components/brochure/brochureForm";
 import Form1 from "@/components/form1New/FormNew";
 import Preloader from "@/components/preloader/index";
-import VideoPlayer from "@/components/videoPlayer/videoplayer";
+import VideoPlayer from "@/components/videoPlayerNew/videoplayerNew";
 
 
 export default function Home() {
