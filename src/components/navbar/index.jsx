@@ -5,7 +5,7 @@ import Nav from "@/components/navbar/nav";
 import { AnimatePresence } from 'framer-motion';
 import { usePathname } from 'next/navigation';
 import Image from "next/image";
-import Image1 from "@/images/Logo1.png"
+import Image1 from "@/images/LogoBannerTwo.png"
 import Link from "next/link";
 export default function Home() {
 
